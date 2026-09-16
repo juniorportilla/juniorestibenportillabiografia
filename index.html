@@ -1200,10 +1200,29 @@
 
 <script>
 /* =========================================================
-   1) ENLACES DE IMÁGENES (GitHub, tipo raw)
+   1) IMÁGENES
+   ---------------------------------------------------------
+   Tienes dos formas de llenar esto:
+
+   A) La más fácil. Si el archivo .html y las fotos están en la MISMA
+      carpeta del repositorio, escribe solo el nombre del archivo:
+         "IMG.1": "img1.jpg"
+
+   B) Si las fotos están en otro repositorio o en otra carpeta, pega el
+      enlace completo. Puedes pegar el enlace normal de GitHub
+      (el que dice /blob/): el código lo convierte solo a tipo raw.
+
+   Atajo: si todas tus fotos están en la misma carpeta remota, pega esa
+   carpeta una sola vez en BASE y luego escribe solo los nombres.
+   Ejemplo:
+   const BASE = "https://raw.githubusercontent.com/USUARIO/REPO/main/";
+
+   Ojo con las mayúsculas: IMG1.JPG y img1.jpg no son lo mismo en GitHub.
    ========================================================= */
+const BASE = "";
+
 const IMAGENES = {
-  "IMG.1": "",
+  "IMG.1": "img1.jpg",
   "IMG.2": "",
   "IMG.3": "",
   "IMG.4": "",
@@ -1244,6 +1263,28 @@ const CONTACTO = {
    ========================================================= */
 const OPINIONES = [];
 
+/* ====== Resolver la ruta de cada imagen ====== */
+function resolverImagen(valor){
+  var v = (valor || '').trim();
+  if (!v) return '';
+
+  // Enlace normal de GitHub -> enlace raw
+  if (v.indexOf('github.com/') !== -1 && v.indexOf('/blob/') !== -1) {
+    v = v.replace('github.com/', 'raw.githubusercontent.com/').replace('/blob/', '/');
+  }
+  // Enlace de la vista "raw" de GitHub -> dominio raw
+  if (v.indexOf('github.com/') !== -1 && v.indexOf('/raw/') !== -1) {
+    v = v.replace('github.com/', 'raw.githubusercontent.com/').replace('/raw/', '/');
+  }
+  // Ya es un enlace completo
+  if (/^https?:\/\//i.test(v)) return v;
+
+  // Solo el nombre del archivo: se usa BASE si está definido
+  var base = (BASE || '').trim();
+  if (base && base.slice(-1) !== '/') base += '/';
+  return base + v.replace(/^\.?\//, '');
+}
+
 /* ====== Render de los espacios de imagen ====== */
 (function(){
   var slots = Array.prototype.slice.call(document.querySelectorAll('.slot'));
@@ -1254,7 +1295,7 @@ const OPINIONES = [];
     var marco = slot.querySelector('.marco');
     var cap = slot.querySelector('figcaption');
     var texto = cap ? cap.textContent.trim() : id;
-    var url = (IMAGENES[id] || '').trim();
+    var url = resolverImagen(IMAGENES[id]);
 
     if (url) {
       var img = document.createElement('img');
@@ -1262,6 +1303,7 @@ const OPINIONES = [];
       img.alt = texto;
       img.loading = 'lazy';
       img.addEventListener('error', function(){
+        console.warn('[' + id + '] No se pudo cargar la imagen desde: ' + url);
         marco.innerHTML = '<div class="vacio"><b>' + id + '</b>Imagen no disponible en este momento.</div>';
       });
       img.addEventListener('load', function(){
