@@ -1202,47 +1202,50 @@
 /* =========================================================
    1) IMÁGENES
    ---------------------------------------------------------
-   Tienes dos formas de llenar esto:
+   ¡IMPORTANTE! Este es el punto que estaba causando el problema:
+   antes solo "IMG.1" tenía un nombre de archivo; el resto estaba
+   vacío ("") y por eso NO cargaban, sin importar qué subieras a
+   GitHub. Ahora cada IMG.X ya tiene su nombre de archivo asignado
+   (img1.jpg, img2.jpg, img3.jpg... img21.jpg).
 
-   A) La más fácil. Si el archivo .html y las fotos están en la MISMA
-      carpeta del repositorio, escribe solo el nombre del archivo:
-         "IMG.1": "img1.jpg"
+   QUÉ DEBES HACER:
+   Sube a la MISMA carpeta de GitHub donde está este .html un
+   archivo con el nombre exacto de cada fila de abajo (mismas
+   mayúsculas/minúsculas, mismo formato .jpg). Si subes una imagen
+   en formato .png o .webp, cambia la extensión aquí también.
 
-   B) Si las fotos están en otro repositorio o en otra carpeta, pega el
-      enlace completo. Puedes pegar el enlace normal de GitHub
-      (el que dice /blob/): el código lo convierte solo a tipo raw.
-
-   Atajo: si todas tus fotos están en la misma carpeta remota, pega esa
-   carpeta una sola vez en BASE y luego escribe solo los nombres.
-   Ejemplo:
+   Si prefieres subir las fotos a otra carpeta o repositorio,
+   escribe esa ruta una sola vez en BASE, por ejemplo:
    const BASE = "https://raw.githubusercontent.com/USUARIO/REPO/main/";
+   y deja solo el nombre del archivo en cada línea (como está ahora).
 
-   Ojo con las mayúsculas: IMG1.JPG y img1.jpg no son lo mismo en GitHub.
+   También puedes pegar el enlace completo de GitHub (el que dice
+   /blob/) directamente en una fila y el código lo convierte solo.
    ========================================================= */
 const BASE = "";
 
 const IMAGENES = {
-  "IMG.1": "img1.jpg",
-  "IMG.2": "",
-  "IMG.3": "",
-  "IMG.4": "",
-  "IMG.5": "",
-  "IMG.6": "",
-  "IMG.7": "",
-  "IMG.8": "",
-  "IMG.9": "",
-  "IMG.10": "",
-  "IMG.11": "",
-  "IMG.12": "",
-  "IMG.13": "",
-  "IMG.14": "",
-  "IMG.15": "",
-  "IMG.16": "",
-  "IMG.17": "",
-  "IMG.18": "",
-  "IMG.19": "",
-  "IMG.20": "",
-  "IMG.21": ""
+  "IMG.1":  "img1.jpg",   // Retrato principal (infobox)
+  "IMG.2":  "img2.jpg",   // Firma o logo JEP (infobox)
+  "IMG.3":  "img3.jpg",   // Paisaje San Miguel La Dorada
+  "IMG.4":  "img4.jpg",   // Foto de infancia/familia
+  "IMG.5":  "img5.jpg",   // Colegio Jordan Ortiz
+  "IMG.6":  "img6.jpg",   // Diploma / acta de grado
+  "IMG.7":  "img7.jpg",   // Espacio de estudio
+  "IMG.8":  "img8.jpg",   // Espacio de trabajo / gráficos de mercado
+  "IMG.9":  "img9.jpg",   // Captura sobre criptomonedas
+  "IMG.10": "img10.jpg",  // Ventas digitales / Hotmart
+  "IMG.11": "img11.jpg",  // Logo JEP Designer
+  "IMG.12": "img12.jpg",  // Logo JEP Vizion
+  "IMG.13": "img13.jpg",  // Logo JEP Prodigy
+  "IMG.14": "img14.jpg",  // Banner con los 3 logos JEP
+  "IMG.15": "img15.jpg",  // Logo Axtoon
+  "IMG.16": "img16.jpg",  // Bodega / inventario
+  "IMG.17": "img17.jpg",  // Equipo de trabajo Axtoon
+  "IMG.18": "img18.jpg",  // Trabajos de diseño (JEP Designer)
+  "IMG.19": "img19.jpg",  // Proceso creativo (JEP Vizion)
+  "IMG.20": "img20.jpg",  // Proyecto en desarrollo (JEP Prodigy)
+  "IMG.21": "img21.jpg"   // Diploma / medalla distinción escolar
 };
 
 /* =========================================================
