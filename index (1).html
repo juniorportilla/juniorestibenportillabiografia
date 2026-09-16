@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junior Estiben Portilla Ruiz — Perfil</title>
+<meta name="description" content="Perfil biográfico y profesional de Junior Estiben Portilla Ruiz, creador de la marca JEP (JEP Designer, JEP Vizion, JEP Prodigy) y fundador de Axtoon Distribuidora S.A.S.">
+<style>
+  :root{
+    --page:#ffffff;
+    --text:#202122;
+    --muted:#54595d;
+    --link:#0645ad;
+    --link2:#3366cc;
+    --border:#a2a9b1;
+    --line:#eaecf0;
+    --soft:#f8f9fa;
+    --soft-blue:#eaf3ff;
+    --head-blue:#dfe7f5;
+    --cream:#fff8dc;
+    --cream-bd:#f0c000;
+    --shade:#00000010;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --page:#101418;
+      --text:#e6e6e6;
+      --muted:#a9b1b8;
+      --link:#7aa7ff;
+      --link2:#7aa7ff;
+      --border:#3c4750;
+      --line:#2a3138;
+      --soft:#171c21;
+      --soft-blue:#15202b;
+      --head-blue:#1b2733;
+      --cream:#231f14;
+      --cream-bd:#8a7220;
+      --shade:#ffffff10;
+    }
+  }
+  :root[data-theme="dark"]{
+    --page:#101418;
+    --text:#e6e6e6;
+    --muted:#a9b1b8;
+    --link:#7aa7ff;
+    --link2:#7aa7ff;
+    --border:#3c4750;
+    --line:#2a3138;
+    --soft:#171c21;
+    --soft-blue:#15202b;
+    --head-blue:#1b2733;
+    --cream:#231f14;
+    --cream-bd:#8a7220;
+    --shade:#ffffff10;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--text);
+    font-family:Arial, Helvetica, "Liberation Sans", sans-serif;
+    font-size:14px;
+    line-height:1.55;
+  }
+  img{max-width:100%}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .topbar{
+    height:44px;border-bottom:1px solid var(--border);background:var(--page);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 18px;position:sticky;top:0;z-index:30;
+  }
+  .brand-mini{font-size:13px;color:var(--muted)}
+  .brand-mini b{color:var(--text)}
+  .top-actions{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:center}
+  .btn-mini{
+    border:1px solid var(--border);background:var(--soft);color:var(--text);
+    font-size:12px;padding:4px 9px;cursor:pointer;border-radius:2px;
+  }
+  .btn-mini:hover{background:var(--shade)}
+
+  .layout{
+    max-width:1450px;margin:0 auto;display:grid;
+    grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 20px 40px;
+  }
+  .toc{
+    position:sticky;top:64px;align-self:start;border-right:1px solid var(--line);
+    padding-right:14px;max-height:calc(100vh - 86px);overflow:auto;
+  }
+  .toc h3{font-size:13px;margin:0 0 8px}
+  .toc a{display:block;font-size:12px;padding:3px 0;color:var(--text)}
+  .toc a:hover{color:var(--link)}
+  .toc .sub{padding-left:12px;color:var(--muted)}
+
+  .article{max-width:1120px;min-width:0}
+  .title-row{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+    border-bottom:1px solid var(--border);padding-bottom:7px;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;font-size:34px;line-height:1.15;
+    font-weight:400;margin:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+  }
+  h1:hover{color:var(--link)}
+  h1 .chev{font-size:15px;color:var(--muted);transition:transform .2s}
+  h1.abierto .chev{transform:rotate(90deg)}
+  .page-tabs{font-size:12px;color:var(--muted);padding-top:8px;white-space:nowrap}
+  .page-tabs span{border:1px solid var(--border);padding:4px 8px;background:var(--soft)}
+
+  .ficha-rapida{
+    display:none;border:1px solid var(--border);border-left:4px solid var(--link2);
+    background:var(--soft-blue);padding:12px 14px;margin:12px 0 4px;
+  }
+  .ficha-rapida.visible{display:block}
+  .ficha-rapida ul{margin:6px 0 0;padding-left:18px}
+  .ficha-rapida li{margin:2px 0}
+
+  .subtitle{color:var(--muted);font-size:13px;margin:10px 0 14px}
+  .lead{font-size:14px;margin:0 0 16px}
+
+  .infobox{
+    width:320px;float:right;margin:0 0 16px 22px;border:1px solid var(--border);
+    background:var(--soft);font-size:12px;
+  }
+  .infobox .ibox-title{
+    background:var(--head-blue);text-align:center;font-family:Georgia,serif;
+    font-size:16px;font-weight:700;padding:8px;border-bottom:1px solid var(--border);
+  }
+  .ibox-section{
+    background:var(--head-blue);font-weight:700;text-align:center;padding:5px;
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  }
+  .ibox-table{width:100%;border-collapse:collapse}
+  .ibox-table td{padding:5px 7px;vertical-align:top;border-bottom:1px solid var(--line)}
+  .ibox-table td:first-child{width:42%;font-weight:700;color:var(--muted)}
+  .clear{clear:both}
+
+  /* ---------- Espacios de imagen ---------- */
+  .slot{margin:12px 0;border:1px solid var(--border);background:var(--soft);padding:6px}
+  .slot .marco{
+    width:100%;min-height:150px;display:flex;align-items:center;justify-content:center;
+    background:repeating-linear-gradient(45deg,var(--shade) 0 10px,transparent 10px 20px);
+    border:1px dashed var(--border);text-align:center;padding:14px;cursor:pointer;
+  }
+  .slot .marco img{display:block;width:100%;height:auto;cursor:zoom-in}
+  .slot .vacio{color:var(--muted);font-size:12px;line-height:1.5}
+  .slot .vacio b{display:block;font-size:16px;color:var(--text);letter-spacing:1px}
+  .slot figcaption{font-size:11px;color:var(--muted);padding:6px 4px 2px}
+  .slot-infobox{margin:10px}
+  .slot-derecha{float:right;width:320px;margin:6px 0 14px 20px}
+  .slot-izquierda{float:left;width:300px;margin:6px 20px 14px 0}
+  .slot-ancho{width:100%}
+
+  h2{
+    font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:400;
+    border-bottom:1px solid var(--border);padding-bottom:4px;margin:26px 0 10px;
+  }
+  h3{font-family:Georgia,"Times New Roman",serif;font-size:17px;margin:18px 0 6px}
+  p{margin:8px 0}
+
+  .notice{border:1px solid var(--border);background:var(--soft);padding:10px 12px;margin:12px 0}
+  .notice.blue{background:var(--soft-blue);border-left:4px solid var(--link2)}
+  .notice.cream{background:var(--cream);border-left:4px solid var(--cream-bd)}
+
+  .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .brand-card{border:1px solid var(--border);background:var(--page);padding:12px}
+  .brand-mark{font-weight:800;font-size:19px;letter-spacing:.5px;margin-bottom:6px}
+  .brand-card p{font-size:12px;color:var(--muted);margin:6px 0 0}
+
+  .timeline{border-left:3px solid var(--border);margin:14px 0 14px 10px;padding-left:18px}
+  .event{position:relative;margin:0 0 16px}
+  .event:before{
+    content:"";position:absolute;width:10px;height:10px;border-radius:50%;
+    background:var(--link2);left:-24px;top:6px;border:2px solid var(--page);
+    box-shadow:0 0 0 1px var(--link2);
+  }
+  .year{font-weight:700;color:var(--muted);font-size:12px}
+  .event-title{font-weight:700;margin-top:2px}
+
+  .skills{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+  .tag{background:var(--soft);border:1px solid var(--border);padding:4px 9px;font-size:12px;border-radius:2px}
+
+  .quote{
+    border:1px solid var(--border);background:var(--page);padding:15px 18px;margin:12px 0;
+    font-family:Georgia,serif;font-style:italic;
+  }
+
+  .tabla{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+  .tabla th,.tabla td{border:1px solid var(--border);padding:7px 9px;text-align:left;vertical-align:top}
+  .tabla th{background:var(--head-blue)}
+
+  .social-box{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:10px 0}
+  .social{border:1px solid var(--border);background:var(--soft);padding:10px}
+  .social b{display:block;font-size:12px}
+  .social span{font-size:11px;color:var(--muted)}
+
+  details{border-bottom:1px solid var(--line);padding:8px 0}
+  summary{cursor:pointer;color:var(--link);font-weight:600}
+
+  pre{
+    background:var(--soft);border:1px solid var(--border);padding:10px;
+    overflow-x:auto;font-size:12px;
+  }
+
+  .footer{margin-top:32px;padding:15px 0 0;border-top:1px solid var(--border);color:var(--muted);font-size:11px}
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .small{font-size:11px;color:var(--muted)}
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    display:none;position:fixed;inset:0;background:#000000e0;z-index:60;
+    align-items:center;justify-content:center;padding:24px;
+  }
+  .lightbox.visible{display:flex}
+  .lightbox img{max-width:95%;max-height:90vh}
+  .lightbox .cerrar{
+    position:absolute;top:14px;right:20px;color:#fff;font-size:28px;cursor:pointer;
+    background:none;border:none;
+  }
+
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;padding:12px}
+    .toc{display:none}
+    .infobox{width:100%;float:none;margin:10px 0 18px}
+    .slot-derecha,.slot-izquierda{float:none;width:100%;margin:12px 0}
+    .brand-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    h1{font-size:27px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand-mini"><b>JEP</b> · Perfil biográfico</div>
+  <div class="top-actions">
+    <span>Leer · Editar · Historial</span>
+    <button class="btn-mini" id="btnTema" type="button">Tema</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="toc">
+    <h3>Contenidos</h3>
+    <a href="#inicio">Inicio</a>
+    <a href="#biografia">Biografía</a>
+    <a class="sub" href="#origenes">Orígenes y primeros años</a>
+    <a class="sub" href="#colegio">Etapa escolar</a>
+    <a class="sub" href="#formacion">Formación académica</a>
+    <a href="#mercados">Mercados financieros</a>
+    <a class="sub" href="#acciones">Bolsa de valores</a>
+    <a class="sub" href="#cripto">Criptomonedas</a>
+    <a href="#hotmart">Ventas digitales · Hotmart</a>
+    <a href="#jep">Marca JEP</a>
+    <a class="sub" href="#jepdesigner">JEP Designer</a>
+    <a class="sub" href="#jepvizion">JEP Vizion</a>
+    <a class="sub" href="#jepprodigy">JEP Prodigy</a>
+    <a href="#axtoon">Axtoon Distribuidora S.A.S.</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#habilidades">Áreas de formación</a>
+    <a href="#presencia">Presencia digital</a>
+    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#imagenes">Cómo cargar las imágenes</a>
+  </aside>
+
+  <main class="article">
+
+    <!-- ===================== INICIO ===================== -->
+    <section id="inicio">
+      <div class="title-row">
+        <h1 id="tituloNombre"><span class="chev">›</span>Junior Estiben Portilla Ruiz</h1>
+        <div class="page-tabs"><span>Perfil</span></div>
+      </div>
+
+      <div class="ficha-rapida" id="fichaRapida">
+        <b>Ficha rápida</b>
+        <ul>
+          <li><b>Nombre:</b> Junior Estiben Portilla Ruiz</li>
+          <li><b>Edad:</b> 23 años · <b>Nacionalidad:</b> colombiana</li>
+          <li><b>Origen:</b> San Miguel La Dorada, Putumayo</li>
+          <li><b>Marca:</b> JEP — JEP Designer · JEP Vizion · JEP Prodigy</li>
+          <li><b>Empresa:</b> Axtoon Distribuidora S.A.S.</li>
+          <li><b>Formación:</b> Secretariado Ejecutivo · Diseño · Ventas digitales · Mercados financieros</li>
+        </ul>
+      </div>
+
+      <div class="subtitle">Creador de la marca JEP · Emprendedor colombiano · Formación en diseño, ventas y mercados financieros</div>
+
+      <aside class="infobox">
+        <div class="ibox-title">Junior Estiben Portilla Ruiz</div>
+
+        <figure class="slot slot-infobox" data-img="IMG.1">
+          <div class="marco"></div>
+          <figcaption>IMG.1 — Fotografía principal de perfil</figcaption>
+        </figure>
+
+        <div class="ibox-section">Información personal</div>
+        <table class="ibox-table">
+          <tr><td>Nombre completo</td><td>Junior Estiben Portilla Ruiz</td></tr>
+          <tr><td>Conocido como</td><td>Estiben Portilla · JEP</td></tr>
+          <tr><td>Nacionalidad</td><td>Colombiana</td></tr>
+          <tr><td>Edad</td><td>23 años</td></tr>
+          <tr><td>Origen</td><td>San Miguel La Dorada, Putumayo</td></tr>
+          <tr><td>Residencia</td><td>Colombia</td></tr>
+          <tr><td>Ocupación</td><td>Emprendedor y creador de marca</td></tr>
+          <tr><td>Marca</td><td>JEP</td></tr>
+          <tr><td>Empresa</td><td>Axtoon Distribuidora S.A.S.</td></tr>
+        </table>
+
+        <div class="ibox-section">Formación</div>
+        <table class="ibox-table">
+          <tr><td>Secundaria</td><td>Colegio Jordan Ortiz</td></tr>
+          <tr><td>Técnico</td><td>Secretariado Ejecutivo · Politécnico Internacional Colombiano</td></tr>
+          <tr><td>Universidad</td><td>Diseño · Uniremington</td></tr>
+          <tr><td>Complementaria</td><td>Ventas digitales, comercio electrónico y mercados financieros</td></tr>
+        </table>
+
+        <div class="ibox-section">Líneas de la marca JEP</div>
+        <table class="ibox-table">
+          <tr><td>JEP Designer</td><td>Diseño y creación visual</td></tr>
+          <tr><td>JEP Vizion</td><td>Visión creativa y conceptos</td></tr>
+          <tr><td>JEP Prodigy</td><td>Proyectos e iniciativas</td></tr>
+        </table>
+
+        <figure class="slot slot-infobox" data-img="IMG.2">
+          <div class="marco"></div>
+          <figcaption>IMG.2 — Logotipo o firma de la marca JEP</figcaption>
+        </figure>
+      </aside>
+
+      <p class="lead">
+        <b>Junior Estiben Portilla Ruiz</b> es un joven colombiano de 23 años, originario del municipio de
+        <b>San Miguel La Dorada, Putumayo</b>. Es el creador de la marca <b>JEP</b>, de la que se desprenden las
+        líneas <b>JEP Designer</b>, <b>JEP Vizion</b> y <b>JEP Prodigy</b>, y actualmente desarrolla la empresa
+        <b>Axtoon Distribuidora S.A.S.</b>, dedicada a la venta de productos a nivel nacional en Colombia.
+      </p>
+      <p>
+        Su recorrido combina formación técnica en <b>Secretariado Ejecutivo</b>, estudios de <b>diseño</b> en
+        Uniremington, experiencia en <b>ventas digitales</b> a través de Hotmart y formación como inversionista en
+        la <b>Bolsa de Valores de Colombia</b> y el mercado de <b>Nueva York</b>, además del ámbito de las
+        <b>criptomonedas</b>. Ese cruce de áreas administrativas, creativas y comerciales define el perfil
+        multidisciplinario con el que impulsa sus proyectos.
+      </p>
+      <p class="small">
+        Consejo: haz clic sobre el nombre del título para desplegar u ocultar la ficha rápida, y sobre cualquier
+        imagen para verla en tamaño completo.
+      </p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ===================== BIOGRAFÍA ===================== -->
+    <section id="biografia">
+      <h2>Biografía</h2>
+
+      <h3 id="origenes">Orígenes y primeros años</h3>
+      <figure class="slot slot-derecha" data-img="IMG.3">
+        <div class="marco"></div>
+        <figcaption>IMG.3 — Imagen de infancia, familia o del municipio de origen</figcaption>
+      </figure>
+      <p>
+        Nació y creció en el departamento del <b>Putumayo</b>, en el municipio de San Miguel La Dorada, una zona
+        del sur de Colombia marcada por la actividad agrícola y el comercio de frontera. Ese entorno, de recursos
+        limitados y esfuerzo constante, influyó en su forma de entender el trabajo y la búsqueda de oportunidades
+        propias.
+      </p>
+      <p>
+        Desde temprano mostró interés por la creatividad, la tecnología y los negocios: dibujar, imaginar marcas y
+        pensar en proyectos propios fueron actividades habituales antes de que existiera cualquier formación formal
+        en esas áreas. Con el tiempo, esos intereses dejaron de ser un pasatiempo para convertirse en el eje de su
+        desarrollo profesional.
+      </p>
+      <div class="clear"></div>
+
+      <h3 id="colegio">Etapa escolar: Colegio Jordan Ortiz</h3>
+      <figure class="slot slot-izquierda" data-img="IMG.4">
+        <div class="marco"></div>
+        <figcaption>IMG.4 — Etapa escolar, grado o reconocimiento académico</figcaption>
+      </figure>
+      <p>
+        Cursó su educación secundaria en el <b>Colegio Jordan Ortiz</b>, donde se destacó como uno de los mejores
+        estudiantes de su promoción. Su rendimiento académico le dejó dos aprendizajes que sostiene hasta hoy: la
+        disciplina como hábito y la capacidad de estudiar por cuenta propia aquello que le interesa.
+      </p>
+      <p>
+        Esa base fue determinante para las etapas siguientes, en las que combinó estudios formales con formación
+        autodidacta en áreas que no aparecían en ningún plan de estudios de la región.
+      </p>
+      <div class="clear"></div>
+
+      <h3 id="formacion">Formación académica</h3>
+      <div class="notice blue">
+        <b>Ruta de formación:</b> Colegio Jordan Ortiz → Técnico en Secretariado Ejecutivo (Politécnico Internacional
+        Colombiano) → Diseño (Uniremington) → Formación complementaria en ventas digitales, comercio electrónico y
+        mercados financieros.
+      </div>
+      <p>
+        Realizó un <b>Técnico en Secretariado Ejecutivo</b> en el <b>Politécnico Internacional Colombiano</b>,
+        formación que le dio herramientas de organización, redacción, atención al cliente y manejo de procesos
+        administrativos, competencias que después aplicaría directamente a la gestión de sus propios proyectos.
+      </p>
+      <p>
+        Posteriormente cursó estudios de <b>Diseño</b> en la <b>Universidad Uniremington</b>, donde desarrolló el
+        componente visual de su perfil: composición, identidad de marca, manejo de color y comunicación gráfica.
+        Esta etapa es el antecedente directo de la línea <b>JEP Designer</b>.
+      </p>
+
+      <table class="tabla">
+        <tr><th>Etapa</th><th>Institución</th><th>Aporte al perfil</th></tr>
+        <tr><td>Secundaria</td><td>Colegio Jordan Ortiz</td><td>Disciplina y base académica</td></tr>
+        <tr><td>Técnico en Secretariado Ejecutivo</td><td>Politécnico Internacional Colombiano</td><td>Gestión administrativa y organización</td></tr>
+        <tr><td>Diseño</td><td>Uniremington</td><td>Identidad visual y comunicación</td></tr>
+        <tr><td>Formación complementaria</td><td>Autodidacta y plataformas digitales</td><td>Ventas, e-commerce e inversión</td></tr>
+      </table>
+    </section>
+
+    <!-- ===================== MERCADOS ===================== -->
+    <section id="mercados">
+      <h2>Mercados financieros e inversión</h2>
+      <figure class="slot slot-derecha" data-img="IMG.5">
+        <div class="marco"></div>
+        <figcaption>IMG.5 — Espacio de trabajo, gráficos o análisis de mercado</figcaption>
+      </figure>
+
+      <h3 id="acciones">Bolsa de valores</h3>
+      <p>
+        Como parte de su formación complementaria se ha desempeñado como <b>inversionista en la Bolsa de Valores de
+        Colombia</b> y en el <b>mercado de Nueva York</b>, en operaciones de compra y venta de acciones. Este
+        aprendizaje lo llevó a estudiar análisis de empresas, gestión del riesgo y la importancia del horizonte de
+        largo plazo frente a la búsqueda de resultados inmediatos.
+      </p>
+
+      <h3 id="cripto">Criptomonedas</h3>
+      <p>
+        Complementó ese camino con el estudio del ecosistema de las <b>criptomonedas</b>, incluyendo el
+        funcionamiento de los activos digitales, las plataformas de intercambio y la volatilidad propia de este
+        mercado. Más que una actividad aislada, lo describe como una extensión natural de su interés por entender
+        cómo se mueve el dinero.
+      </p>
+      <div class="notice cream">
+        <b>Nota informativa:</b> esta sección describe un área de formación e interés personal. No constituye
+        asesoría financiera, recomendación de inversión ni promesa de rentabilidad de ningún tipo.
+      </div>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ===================== HOTMART ===================== -->
+    <section id="hotmart">
+      <h2>Ventas digitales y experiencia en Hotmart</h2>
+      <figure class="slot slot-izquierda" data-img="IMG.6">
+        <div class="marco"></div>
+        <figcaption>IMG.6 — Etapa de ventas digitales / trabajo en línea</figcaption>
+      </figure>
+      <p>
+        Trabajó en <b>Hotmart</b>, plataforma internacional de productos digitales, donde se especializó en el área
+        de <b>ventas</b>. Allí conoció de cerca el funcionamiento del marketing de afiliación, la creación de
+        embudos de venta, la comunicación persuasiva y la medición de resultados a través de datos.
+      </p>
+      <p>
+        Esa experiencia consolidó una idea que atraviesa todos sus proyectos posteriores: un buen producto necesita
+        una estrategia comercial que lo sostenga. De ahí surge la combinación entre diseño, comunicación y ventas
+        que caracteriza a la marca JEP y, más adelante, a su empresa distribuidora.
+      </p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ===================== MARCA JEP ===================== -->
+    <section id="jep">
+      <h2>Marca JEP</h2>
+      <p>
+        <b>JEP</b> —iniciales de Junior Estiben Portilla— es la marca paraguas creada por él para agrupar sus
+        líneas creativas y de negocio. Funciona como identidad común para tres proyectos con enfoques distintos
+        pero complementarios:
+      </p>
+
+      <div class="brand-grid">
+        <article class="brand-card" id="jepdesigner">
+          <div class="brand-mark">JEP DESIGNER</div>
+          <p>Línea de diseño y creación visual: identidad de marca, piezas gráficas y comunicación para proyectos propios y de terceros. Nace directamente de su formación en diseño.</p>
+        </article>
+        <article class="brand-card" id="jepvizion">
+          <div class="brand-mark">JEP VIZION</div>
+          <p>Línea dedicada a la visión creativa: conceptualización de ideas, desarrollo de propuestas y dirección de proyectos antes de su ejecución.</p>
+        </article>
+        <article class="brand-card" id="jepprodigy">
+          <div class="brand-mark">JEP PRODIGY</div>
+          <p>Línea destinada a nuevas iniciativas y proyectos emergentes que amplían el ecosistema JEP hacia otros formatos y mercados.</p>
+        </article>
+      </div>
+
+      <figure class="slot slot-ancho" data-img="IMG.7">
+        <div class="marco"></div>
+        <figcaption>IMG.7 — Logotipos de JEP Designer, JEP Vizion y JEP Prodigy</figcaption>
+      </figure>
+
+      <div class="notice cream">
+        <b>Nota sobre la marca:</b> las tres líneas se presentan como extensiones de JEP. Sus logotipos, servicios y
+        alcances específicos pueden ampliarse en el futuro con información oficial de cada proyecto.
+      </div>
+    </section>
+
+    <!-- ===================== AXTOON ===================== -->
+    <section id="axtoon">
+      <h2>Axtoon Distribuidora S.A.S.</h2>
+      <figure class="slot slot-derecha" data-img="IMG.8">
+        <div class="marco"></div>
+        <figcaption>IMG.8 — Logotipo, bodega, productos o equipo de Axtoon</figcaption>
+      </figure>
+      <p>
+        En su etapa empresarial actual constituyó <b>Axtoon Distribuidora S.A.S.</b>, empresa dedicada a la
+        <b>venta y distribución de productos a nivel nacional en Colombia</b>. El proyecto reúne lo aprendido en
+        ventas digitales, diseño de marca y gestión administrativa dentro de una sola operación comercial.
+      </p>
+      <p>
+        La propuesta combina los canales digitales con la logística de distribución, de modo que un cliente en
+        cualquier región del país pueda acceder al catálogo. El objetivo declarado es crecer de forma ordenada:
+        primero consolidar la operación y la confianza de los clientes, y después ampliar líneas de producto y
+        cobertura.
+      </p>
+      <div class="notice blue">
+        <b>Enfoque empresarial:</b> comercialización de productos · ventas por canales digitales · distribución con
+        alcance nacional · construcción progresiva de marca empresarial.
+      </div>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ===================== TRAYECTORIA ===================== -->
+    <section id="trayectoria">
+      <h2>Trayectoria</h2>
+      <div class="timeline">
+        <div class="event">
+          <div class="year">Etapa escolar</div>
+          <div class="event-title">Colegio Jordan Ortiz</div>
+          <p>Educación secundaria con desempeño destacado entre los mejores estudiantes de su promoción.</p>
+        </div>
+        <div class="event">
+          <div class="year">Formación técnica</div>
+          <div class="event-title">Técnico en Secretariado Ejecutivo</div>
+          <p>Politécnico Internacional Colombiano. Bases administrativas, organización y gestión de procesos.</p>
+        </div>
+        <div class="event">
+          <div class="year">Formación universitaria</div>
+          <div class="event-title">Diseño en Uniremington</div>
+          <p>Desarrollo de competencias en diseño, identidad visual y comunicación gráfica.</p>
+        </div>
+        <div class="event">
+          <div class="year">Formación complementaria</div>
+          <div class="event-title">Bolsa de valores y criptomonedas</div>
+          <p>Compra y venta de acciones en los mercados de Colombia y Nueva York, además del ecosistema cripto.</p>
+        </div>
+        <div class="event">
+          <div class="year">Desarrollo profesional</div>
+          <div class="event-title">Hotmart · ventas digitales</div>
+          <p>Especialización en ventas, marketing de afiliación y estrategias comerciales en entornos digitales.</p>
+        </div>
+        <div class="event">
+          <div class="year">Proyecto de marca</div>
+          <div class="event-title">Creación de JEP</div>
+          <p>Nacimiento de JEP como marca paraguas de JEP Designer, JEP Vizion y JEP Prodigy.</p>
+        </div>
+        <div class="event">
+          <div class="year">Etapa empresarial actual</div>
+          <div class="event-title">Axtoon Distribuidora S.A.S.</div>
+          <p>Empresa de venta y distribución de productos con alcance nacional en Colombia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section id="habilidades">
+      <h2>Áreas de formación e interés</h2>
+      <div class="skills">
+        <span class="tag">Diseño gráfico</span>
+        <span class="tag">Identidad de marca</span>
+        <span class="tag">Secretariado ejecutivo</span>
+        <span class="tag">Ventas digitales</span>
+        <span class="tag">Comercio electrónico</span>
+        <span class="tag">Marketing de afiliación</span>
+        <span class="tag">Emprendimiento</span>
+        <span class="tag">Bolsa de valores</span>
+        <span class="tag">Criptomonedas</span>
+        <span class="tag">Distribución nacional</span>
+        <span class="tag">Atención al cliente</span>
+      </div>
+      <p>
+        La combinación de estas áreas describe un perfil multidisciplinario capaz de conectar la parte creativa de
+        un proyecto con su ejecución comercial y administrativa.
+      </p>
+
+      <h3>Enfoque personal</h3>
+      <div class="quote">
+        “Aprender de todo un poco no dispersa: permite que una misma persona pueda diseñar la idea, venderla y
+        sostenerla en el tiempo.”
+      </div>
+      <p class="small">
+        Frase editorial que resume el enfoque descrito en este perfil; no se presenta como cita textual verificada.
+      </p>
+    </section>
+
+    <!-- ===================== PRESENCIA ===================== -->
+    <section id="presencia">
+      <h2>Presencia en redes sociales</h2>
+      <p>
+        En redes sociales aparece principalmente como <b>Estiben Portilla</b> en Facebook, y también cuenta con
+        presencia en Instagram.
+      </p>
+      <div class="social-box">
+        <div class="social"><b>Facebook</b><span>Estiben Portilla</span></div>
+        <div class="social"><b>Instagram</b><span>Perfil activo — agregar usuario oficial</span></div>
+        <div class="social"><b>Marca JEP</b><span>Sitio oficial pendiente</span></div>
+        <div class="social"><b>Axtoon Distribuidora S.A.S.</b><span>Canales comerciales pendientes</span></div>
+      </div>
+      <p class="small">
+        Esta versión no inventa usuarios ni direcciones. Reemplázalos en el código cuando tengas los enlaces
+        oficiales.
+      </p>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Quién es Junior Estiben Portilla Ruiz?</summary><p>Un joven colombiano de 23 años, originario de San Miguel La Dorada (Putumayo), creador de la marca JEP y fundador de Axtoon Distribuidora S.A.S.</p></details>
+      <details><summary>¿Qué es JEP?</summary><p>Es su marca personal y paraguas, de la que se desprenden JEP Designer, JEP Vizion y JEP Prodigy.</p></details>
+      <details><summary>¿Qué es Axtoon Distribuidora S.A.S.?</summary><p>La empresa que desarrolla actualmente, dedicada a la venta y distribución de productos a nivel nacional en Colombia.</p></details>
+      <details><summary>¿Dónde estudió?</summary><p>En el Colegio Jordan Ortiz, luego un Técnico en Secretariado Ejecutivo en el Politécnico Internacional Colombiano y estudios de Diseño en Uniremington.</p></details>
+      <details><summary>¿Qué experiencia tiene en ventas?</summary><p>Trabajó en Hotmart, donde se especializó en ventas y estrategias comerciales digitales.</p></details>
+      <details><summary>¿Tiene formación en inversiones?</summary><p>Sí: compra y venta de acciones en la Bolsa de Valores de Colombia y el mercado de Nueva York, además de formación en criptomonedas. No ofrece asesoría financiera.</p></details>
+      <details><summary>¿Cómo se le puede contactar?</summary><p>A través de sus redes sociales; los canales oficiales de contacto se agregarán en la sección de enlaces externos.</p></details>
+    </section>
+
+    <!-- ===================== IMÁGENES ===================== -->
+    <section id="imagenes">
+      <h2>Cómo cargar las imágenes desde GitHub</h2>
+      <p>
+        Todos los espacios de imagen están numerados (IMG.1 a IMG.8). Para llenarlos, sube las fotos a tu
+        repositorio de GitHub y pega el enlace en la lista <code>IMAGENES</code> que está al final del código, dentro
+        de la etiqueta <code>&lt;script&gt;</code>:
+      </p>
+<pre>const IMAGENES = {
+  "IMG.1": "https://raw.githubusercontent.com/USUARIO/REPO/main/img1.jpg",
+  "IMG.2": "",
+  "IMG.3": "",
+  ...
+};</pre>
+      <p>
+        El enlace debe ser el de tipo <b>raw</b>: abre la imagen en GitHub, haz clic en <i>Raw</i> y copia la URL de
+        la barra de direcciones. Mientras un campo esté vacío, se seguirá mostrando el recuadro con su número.
+      </p>
+      <table class="tabla">
+        <tr><th>Código</th><th>Ubicación</th><th>Contenido sugerido</th></tr>
+        <tr><td>IMG.1</td><td>Ficha lateral</td><td>Retrato principal</td></tr>
+        <tr><td>IMG.2</td><td>Ficha lateral</td><td>Logotipo o firma JEP</td></tr>
+        <tr><td>IMG.3</td><td>Orígenes</td><td>Infancia, familia o municipio</td></tr>
+        <tr><td>IMG.4</td><td>Etapa escolar</td><td>Colegio, grado o reconocimiento</td></tr>
+        <tr><td>IMG.5</td><td>Mercados financieros</td><td>Escritorio, gráficos o análisis</td></tr>
+        <tr><td>IMG.6</td><td>Hotmart</td><td>Etapa de ventas digitales</td></tr>
+        <tr><td>IMG.7</td><td>Marca JEP</td><td>Los tres logotipos</td></tr>
+        <tr><td>IMG.8</td><td>Axtoon</td><td>Logo, productos o equipo</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Enlaces externos</h2>
+      <ul>
+        <li>Facebook: Estiben Portilla</li>
+        <li>Instagram: agregar enlace oficial</li>
+        <li>JEP: agregar sitio oficial cuando esté disponible</li>
+        <li>Axtoon Distribuidora S.A.S.: agregar sitio oficial cuando esté disponible</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <b>Perfil de Junior Estiben Portilla Ruiz</b><br>
+          Página de presentación biográfica y profesional con formato enciclopédico.
+        </div>
+        <div>
+          <b>Nota editorial</b><br>
+          La información fue estructurada a partir de los datos proporcionados por el titular del perfil. Los campos
+          que requieren URL, fotografía o datos adicionales quedan señalados como editables.
+        </div>
+      </div>
+      <p style="margin-top:14px">Última edición: septiembre de 2026 · JEP</p>
+    </footer>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="cerrar" id="cerrarLb" type="button" aria-label="Cerrar">×</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script>
+/* =========================================================
+   1) PEGA AQUÍ LOS ENLACES DE TUS IMÁGENES DE GITHUB (raw)
+   ========================================================= */
+const IMAGENES = {
+  "IMG.1": "",
+  "IMG.2": "",
+  "IMG.3": "",
+  "IMG.4": "",
+  "IMG.5": "",
+  "IMG.6": "",
+  "IMG.7": "",
+  "IMG.8": ""
+};
+
+/* ====== Render de los espacios de imagen ====== */
+document.querySelectorAll('.slot').forEach(function(slot){
+  var id = slot.getAttribute('data-img');
+  var marco = slot.querySelector('.marco');
+  var url = (IMAGENES[id] || '').trim();
+  if (url) {
+    var img = document.createElement('img');
+    img.src = url;
+    img.alt = id;
+    img.addEventListener('error', function(){
+      marco.innerHTML = '<div class="vacio"><b>' + id + '</b>No se pudo cargar la imagen.<br>Revisa el enlace de GitHub (debe ser tipo raw).</div>';
+    });
+    img.addEventListener('click', function(){ abrirLightbox(url, id); });
+    marco.innerHTML = '';
+    marco.appendChild(img);
+  } else {
+    marco.innerHTML = '<div class="vacio"><b>' + id + '</b>Espacio reservado para imagen.<br>Agrega el enlace de GitHub en la lista IMAGENES.</div>';
+  }
+});
+
+/* ====== Lightbox ====== */
+var lb = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+function abrirLightbox(src, alt){
+  lbImg.src = src; lbImg.alt = alt || '';
+  lb.classList.add('visible');
+}
+document.getElementById('cerrarLb').addEventListener('click', function(){ lb.classList.remove('visible'); });
+lb.addEventListener('click', function(e){ if (e.target === lb) lb.classList.remove('visible'); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') lb.classList.remove('visible'); });
+
+/* ====== Clic sobre el nombre: despliega la ficha rápida ====== */
+var titulo = document.getElementById('tituloNombre');
+var ficha = document.getElementById('fichaRapida');
+titulo.addEventListener('click', function(){
+  ficha.classList.toggle('visible');
+  titulo.classList.toggle('abierto');
+});
+
+/* ====== Cambio de tema ====== */
+document.getElementById('btnTema').addEventListener('click', function(){
+  var actual = document.documentElement.getAttribute('data-theme');
+  var oscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var siguiente = actual ? (actual === 'dark' ? 'light' : 'dark') : (oscuro ? 'light' : 'dark');
+  document.documentElement.setAttribute('data-theme', siguiente);
+  try { localStorage.setItem('tema-jep', siguiente); } catch (e) {}
+});
+try {
+  var guardado = localStorage.getItem('tema-jep');
+  if (guardado) document.documentElement.setAttribute('data-theme', guardado);
+} catch (e) {}
+</script>
+</body>
+</html>
