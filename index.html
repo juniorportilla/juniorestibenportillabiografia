@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Junior Estiben Portilla Ruiz — Perfil</title>
 <meta name="description" content="Perfil biográfico y profesional de Junior Estiben Portilla Ruiz, creador de la marca JEP (JEP Designer, JEP Vizion, JEP Prodigy) y fundador de Axtoon Distribuidora S.A.S.">
 <meta name="author" content="Junior Estiben Portilla Ruiz">
@@ -81,7 +81,11 @@
   }
 
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));
+    height:100%;
+  }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *{animation:none !important;transition:none !important}
@@ -94,19 +98,22 @@
     font-size:14px;
     line-height:1.6;
     -webkit-text-size-adjust:100%;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    overflow-x:hidden;
   }
-  img{max-width:100%}
+  img{max-width:100%;height:auto}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--link);outline-offset:2px}
 
   /* ============ BARRA SUPERIOR ============ */
   .topbar{
-    height:46px;border-bottom:1px solid var(--border);background:var(--page);
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0 16px;position:sticky;top:0;z-index:40;
+    min-height:46px;border-bottom:1px solid var(--border);background:var(--page);
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:6px 16px;padding-top:calc(6px + env(safe-area-inset-top,0px));
+    position:sticky;top:0;z-index:40;
   }
-  .brand-mini{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);min-width:0}
+  .brand-mini{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);min-width:0;overflow:hidden}
   .brand-mini .sigla{
     width:26px;height:26px;border:1px solid var(--border);background:var(--soft);
     display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;
@@ -114,7 +121,10 @@
   }
   .brand-mini b{color:var(--text)}
   .brand-mini .sep{color:var(--border)}
-  .top-actions{display:flex;gap:8px;align-items:center}
+  .brand-mini > span:last-child{
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;
+  }
+  .top-actions{display:flex;gap:8px;align-items:center;flex:0 0 auto}
   .btn-mini{
     border:1px solid var(--border);background:var(--soft);color:var(--text);
     font-size:12px;padding:5px 10px;cursor:pointer;border-radius:2px;font-family:inherit;
@@ -165,12 +175,13 @@
   .tabs-right span.on{color:var(--text);border-bottom:2px solid var(--link);background:none}
 
   .title-row{
-    display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 12px;
     border-bottom:1px solid var(--border);padding-bottom:6px;
   }
   h1{
     font-family:Georgia,"Times New Roman",serif;font-size:35px;line-height:1.14;
     font-weight:400;margin:0;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+    word-break:break-word;
   }
   h1:hover{color:var(--link)}
   h1 .chev{font-size:15px;color:var(--muted);transition:transform .2s}
@@ -384,32 +395,39 @@
   /* ============ LIGHTBOX ============ */
   .lightbox{
     display:none;position:fixed;inset:0;background:#000000e6;z-index:60;
-    align-items:center;justify-content:center;padding:26px;flex-direction:column;gap:12px;
+    align-items:center;justify-content:center;
+    padding:calc(26px + env(safe-area-inset-top,0px)) 26px calc(26px + env(safe-area-inset-bottom,0px));
+    flex-direction:column;gap:12px;
   }
   .lightbox.visible{display:flex}
-  .lightbox img{max-width:92%;max-height:82vh;background:#fff}
+  .lightbox img{max-width:92%;max-height:78vh;background:#fff;border-radius:2px}
   .lightbox .pie{color:#e6e6e6;font-size:12.5px;text-align:center;max-width:680px}
   .lightbox .cerrar{
-    position:absolute;top:12px;right:18px;color:#fff;font-size:30px;cursor:pointer;
-    background:none;border:none;line-height:1;
+    position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:18px;color:#fff;
+    font-size:30px;cursor:pointer;background:none;border:none;line-height:1;
   }
   .lightbox .nav{
     position:absolute;top:50%;transform:translateY(-50%);background:#ffffff22;border:none;
-    color:#fff;font-size:26px;cursor:pointer;padding:12px 15px;
+    color:#fff;font-size:26px;cursor:pointer;padding:12px 15px;border-radius:3px;
   }
   .lightbox .nav.prev{left:10px}
   .lightbox .nav.next{right:10px}
+  @media (max-width:520px){
+    .lightbox .nav{font-size:22px;padding:10px 12px}
+    .lightbox img{max-height:68vh}
+  }
 
   /* ============ VOLVER ARRIBA ============ */
   .arriba{
-    position:fixed;right:18px;bottom:18px;z-index:35;display:none;
+    position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;display:none;
     border:1px solid var(--border);background:var(--soft);color:var(--text);
     padding:9px 13px;font-size:12px;cursor:pointer;border-radius:3px;font-family:inherit;
+    box-shadow:0 2px 6px var(--shade);
   }
   .arriba.visible{display:block}
 
   @media (max-width:900px){
-    .layout{grid-template-columns:1fr;padding:12px}
+    .layout{grid-template-columns:1fr;padding:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
     .toc{
       display:none;position:static;max-height:none;border-right:none;
       border:1px solid var(--border);background:var(--soft);padding:12px;margin-bottom:14px;
@@ -420,6 +438,33 @@
     .footer-grid{grid-template-columns:1fr}
     .social-box{grid-template-columns:1fr}
     h1{font-size:27px}
+  }
+
+  /* ============ TELÉFONOS PEQUEÑOS ============ */
+  @media (max-width:480px){
+    body{font-size:13.5px}
+    .layout{padding:10px}
+    h1{font-size:22px;gap:6px}
+    h1 .chev{font-size:13px}
+    h2{font-size:20px;margin:24px 0 8px}
+    h3{font-size:16px}
+    .verificado{font-size:10.5px;padding:3px 7px}
+    .subtitle{font-size:12.5px}
+    .lead{font-size:14px}
+    .brand-mini{font-size:12px;gap:6px}
+    .brand-mini .sigla{width:22px;height:22px;font-size:10px}
+    .ibox-table td:first-child{width:38%}
+    .ibox-table td{font-size:11.5px;padding:5px 6px}
+    .ibox-title{font-size:15px}
+    .chip{font-size:10.5px;padding:3px 6px}
+    .tag{font-size:11px;padding:4px 8px}
+    .cta{padding:9px 13px;font-size:12.5px}
+    .slot .marco{min-height:110px}
+    .slot-ancho .marco{min-height:160px}
+    .timeline{margin-left:4px;padding-left:16px}
+    .event:before{left:-22px}
+    .quote{font-size:14px;padding:12px 14px}
+    .arriba{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px 11px;font-size:11.5px}
   }
 </style>
 </head>
@@ -1288,10 +1333,21 @@ function resolverImagen(valor){
   return base + v.replace(/^\.?\//, '');
 }
 
-/* ====== Render de los espacios de imagen ====== */
+/* ====== Render de los espacios de imagen ======
+   Nota de corrección: antes cada imagen se agregaba al arreglo de la
+   galería solo cuando terminaba de cargar (evento "load"). Como la
+   carga es asíncrona (y varias miniaturas usan loading="lazy", es
+   decir, ni siquiera empiezan a cargar hasta que entran en pantalla),
+   el orden del arreglo no coincidía con el orden real de la página y
+   los botones "anterior/siguiente" del visor podían saltar imágenes
+   o mostrarlas en desorden. Ahora el arreglo se construye una sola
+   vez, de forma síncrona y en el mismo orden en que aparecen los
+   espacios de imagen en el documento; cada entrada se marca como
+   inválida si su imagen falla al cargar. */
 (function(){
   var slots = Array.prototype.slice.call(document.querySelectorAll('.slot'));
-  window.__galeria = [];
+  var galeria = [];
+  window.__galeria = galeria;
 
   slots.forEach(function(slot){
     var id = slot.getAttribute('data-img');
@@ -1300,24 +1356,28 @@ function resolverImagen(valor){
     var texto = cap ? cap.textContent.trim() : id;
     var url = resolverImagen(IMAGENES[id]);
 
-    if (url) {
-      var img = document.createElement('img');
-      img.src = url;
-      img.alt = texto;
-      img.loading = 'lazy';
-      img.addEventListener('error', function(){
-        console.warn('[' + id + '] No se pudo cargar la imagen desde: ' + url);
-        marco.innerHTML = '<div class="vacio"><b>' + id + '</b>Imagen no disponible en este momento.</div>';
-      });
-      img.addEventListener('load', function(){
-        window.__galeria.push({ src:url, pie:texto });
-      });
-      img.addEventListener('click', function(){ abrirLightbox(url, texto); });
-      marco.innerHTML = '';
-      marco.appendChild(img);
-    } else {
+    if (!url) {
       marco.innerHTML = '<div class="vacio"><b>' + id + '</b>Imagen pendiente de publicación.</div>';
+      return;
     }
+
+    var entrada = { src:url, pie:texto, valido:true };
+    galeria.push(entrada);
+
+    var img = document.createElement('img');
+    img.src = url;
+    img.alt = texto;
+    img.loading = 'lazy';
+    img.addEventListener('error', function(){
+      console.warn('[' + id + '] No se pudo cargar la imagen desde: ' + url);
+      entrada.valido = false;
+      marco.innerHTML = '<div class="vacio"><b>' + id + '</b>Imagen no disponible en este momento.</div>';
+    });
+    img.addEventListener('click', function(){
+      if (entrada.valido) abrirLightbox(entrada);
+    });
+    marco.innerHTML = '';
+    marco.appendChild(img);
   });
 })();
 
@@ -1327,25 +1387,32 @@ var lbImg = document.getElementById('lbImg');
 var lbPie = document.getElementById('lbPie');
 var indiceActual = -1;
 
-function abrirLightbox(src, pie){
-  lbImg.src = src;
-  lbImg.alt = pie || '';
-  lbPie.textContent = pie || '';
-  lb.classList.add('visible');
-  indiceActual = (window.__galeria || []).findIndex(function(g){ return g.src === src; });
-  actualizarNav();
+function galeriaValida(){
+  return (window.__galeria || []).filter(function(g){ return g.valido; });
 }
-function actualizarNav(){
-  var hay = (window.__galeria || []).length > 1;
+function pintarLightbox(lista){
+  lista = lista || galeriaValida();
+  var actual = lista[indiceActual];
+  if (!actual) return;
+  lbImg.src = actual.src;
+  lbImg.alt = actual.pie || '';
+  lbPie.textContent = actual.pie || '';
+  var hay = lista.length > 1;
   document.getElementById('lbPrev').style.display = hay ? 'block' : 'none';
   document.getElementById('lbNext').style.display = hay ? 'block' : 'none';
 }
+function abrirLightbox(entrada){
+  var lista = galeriaValida();
+  indiceActual = lista.indexOf(entrada);
+  if (indiceActual === -1) indiceActual = 0;
+  lb.classList.add('visible');
+  pintarLightbox(lista);
+}
 function mover(paso){
-  var g = window.__galeria || [];
-  if (!g.length) return;
-  indiceActual = (indiceActual + paso + g.length) % g.length;
-  lbImg.src = g[indiceActual].src;
-  lbPie.textContent = g[indiceActual].pie;
+  var lista = galeriaValida();
+  if (!lista.length) return;
+  indiceActual = (indiceActual + paso + lista.length) % lista.length;
+  pintarLightbox(lista);
 }
 function cerrarLightbox(){ lb.classList.remove('visible'); lbImg.src = ''; }
 
