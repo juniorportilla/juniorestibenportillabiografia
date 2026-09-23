@@ -8,7 +8,6 @@
 <meta name="author" content="Junior Estiben Portilla Ruiz">
 <link rel="canonical" href="https://juniorestibenportilla.com/">
 
-<!-- Open Graph / Facebook -->
 <meta property="og:title" content="Junior Estiben Portilla Ruiz">
 <meta property="og:description" content="Perfil biográfico y profesional de Junior Estiben Portilla Ruiz, creador de JEP y fundador de Axtoon Distribuidora S.A.S.">
 <meta property="og:image" content="https://juniorestibenportilla.com/og-image.jpg">
@@ -21,13 +20,11 @@
 <meta property="og:site_name" content="Junior Estiben Portilla Ruiz">
 <meta property="og:locale" content="es_CO">
 
-<!-- Twitter / otras plataformas -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Junior Estiben Portilla Ruiz">
 <meta name="twitter:description" content="Perfil biográfico y profesional de Junior Estiben Portilla Ruiz.">
 <meta name="twitter:image" content="https://juniorestibenportilla.com/og-image.jpg">
 <script>
-  /* Aplica el tema guardado antes de pintar la página (evita el parpadeo) */
   try {
     var t = localStorage.getItem('tema-jep');
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
@@ -56,74 +53,36 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --page:#0f1317;
-      --text:#e6e6e6;
-      --muted:#a9b1b8;
-      --link:#7aa7ff;
-      --link-visited:#b49cff;
-      --border:#3c4750;
-      --line:#262d34;
-      --soft:#161b20;
-      --soft-blue:#15202b;
-      --head-blue:#1b2733;
-      --cream:#231f14;
-      --cream-bd:#8a7220;
-      --green:#2fa565;
-      --green-2:#1fa855;
-      --blue-tg:#3d8fdd;
-      --shade:#ffffff10;
-      --thumb-bg:#161b20;
-      --star:#e8bb3c;
+      --page:#0f1317;--text:#e6e6e6;--muted:#a9b1b8;--link:#7aa7ff;--link-visited:#b49cff;
+      --border:#3c4750;--line:#262d34;--soft:#161b20;--soft-blue:#15202b;--head-blue:#1b2733;
+      --cream:#231f14;--cream-bd:#8a7220;--green:#2fa565;--green-2:#1fa855;--blue-tg:#3d8fdd;
+      --shade:#ffffff10;--thumb-bg:#161b20;--star:#e8bb3c;
     }
   }
   :root[data-theme="dark"]{
-    --page:#0f1317;
-    --text:#e6e6e6;
-    --muted:#a9b1b8;
-    --link:#7aa7ff;
-    --link-visited:#b49cff;
-    --border:#3c4750;
-    --line:#262d34;
-    --soft:#161b20;
-    --soft-blue:#15202b;
-    --head-blue:#1b2733;
-    --cream:#231f14;
-    --cream-bd:#8a7220;
-    --green:#2fa565;
-    --green-2:#1fa855;
-    --blue-tg:#3d8fdd;
-    --shade:#ffffff10;
-    --thumb-bg:#161b20;
-    --star:#e8bb3c;
+    --page:#0f1317;--text:#e6e6e6;--muted:#a9b1b8;--link:#7aa7ff;--link-visited:#b49cff;
+    --border:#3c4750;--line:#262d34;--soft:#161b20;--soft-blue:#15202b;--head-blue:#1b2733;
+    --cream:#231f14;--cream-bd:#8a7220;--green:#2fa565;--green-2:#1fa855;--blue-tg:#3d8fdd;
+    --shade:#ffffff10;--thumb-bg:#161b20;--star:#e8bb3c;
   }
 
   *{box-sizing:border-box}
-  html{
-    scroll-behavior:smooth;
-    scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));
-    height:100%;
-  }
+  html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));height:100%}
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *{animation:none !important;transition:none !important}
   }
   body{
-    margin:0;
-    background:var(--page);
-    color:var(--text);
+    margin:0;background:var(--page);color:var(--text);
     font-family:Arial,Helvetica,"Liberation Sans",sans-serif;
-    font-size:14px;
-    line-height:1.6;
-    -webkit-text-size-adjust:100%;
-    padding-bottom:env(safe-area-inset-bottom,0px);
-    overflow-x:hidden;
+    font-size:14px;line-height:1.6;-webkit-text-size-adjust:100%;
+    padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden;
   }
   img{max-width:100%;height:auto}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--link);outline-offset:2px}
 
-  /* ============ BARRA SUPERIOR ============ */
   .topbar{
     min-height:46px;border-bottom:1px solid var(--border);background:var(--page);
     display:flex;align-items:center;justify-content:space-between;gap:10px;
@@ -138,9 +97,7 @@
   }
   .brand-mini b{color:var(--text)}
   .brand-mini .sep{color:var(--border)}
-  .brand-mini > span:last-child{
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;
-  }
+  .brand-mini > span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
   .top-actions{display:flex;gap:8px;align-items:center;flex:0 0 auto}
   .btn-mini{
     border:1px solid var(--border);background:var(--soft);color:var(--text);
@@ -151,19 +108,9 @@
   .btn-toc{display:none}
   @media (max-width:900px){ .btn-toc{display:inline-block} }
 
-  /* ============ LAYOUT ============ */
-  .layout{
-    max-width:1500px;margin:0 auto;display:grid;
-    grid-template-columns:215px minmax(0,1fr);gap:26px;padding:18px 20px 50px;
-  }
-  .toc{
-    position:sticky;top:64px;align-self:start;border-right:1px solid var(--line);
-    padding-right:14px;max-height:calc(100vh - 88px);overflow:auto;
-  }
-  .toc h3{
-    font-size:13px;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line);
-    display:flex;justify-content:space-between;align-items:center;
-  }
+  .layout{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:215px minmax(0,1fr);gap:26px;padding:18px 20px 50px}
+  .toc{position:sticky;top:64px;align-self:start;border-right:1px solid var(--line);padding-right:14px;max-height:calc(100vh - 88px);overflow:auto}
+  .toc h3{font-size:13px;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
   .toc h3 span{font-weight:400;font-size:11px;color:var(--muted);cursor:pointer}
   .toc a{display:block;font-size:12.5px;padding:3px 6px;color:var(--text);border-left:3px solid transparent}
   .toc a:hover{color:var(--link);background:var(--soft)}
@@ -171,100 +118,50 @@
   .toc .sub{padding-left:16px;color:var(--muted);font-size:12px}
   .toc .grupo{margin-bottom:2px}
   .toc .grupo.cerrado .sub{display:none}
-  .toc .tog{
-    cursor:pointer;display:inline-block;width:12px;color:var(--muted);font-size:10px;
-  }
-
+  .toc .tog{cursor:pointer;display:inline-block;width:12px;color:var(--muted);font-size:10px}
   .article{max-width:1140px;min-width:0}
 
-  /* ============ CABECERA DEL ARTÍCULO ============ */
-  .tabs-top{
-    display:flex;justify-content:space-between;align-items:flex-end;gap:12px;
-    font-size:12.5px;border-bottom:1px solid var(--border);margin-bottom:14px;flex-wrap:wrap;
-  }
+  .tabs-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;font-size:12.5px;border-bottom:1px solid var(--border);margin-bottom:14px;flex-wrap:wrap}
   .tabs-left,.tabs-right{display:flex;gap:2px}
-  .tabs-left span,.tabs-right span{
-    padding:5px 11px;border:1px solid var(--border);border-bottom:none;background:var(--soft);
-    color:var(--muted);
-  }
+  .tabs-left span,.tabs-right span{padding:5px 11px;border:1px solid var(--border);border-bottom:none;background:var(--soft);color:var(--muted)}
   .tabs-left span.on,.tabs-right span.on{background:var(--page);color:var(--text);font-weight:700}
   .tabs-right span{border:none;background:none;padding:5px 8px;color:var(--link)}
   .tabs-right span.on{color:var(--text);border-bottom:2px solid var(--link);background:none}
 
-  .title-row{
-    display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 12px;
-    border-bottom:1px solid var(--border);padding-bottom:6px;
-  }
-  h1{
-    font-family:Georgia,"Times New Roman",serif;font-size:35px;line-height:1.14;
-    font-weight:400;margin:0;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
-    word-break:break-word;
-  }
+  .title-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 12px;border-bottom:1px solid var(--border);padding-bottom:6px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:35px;line-height:1.14;font-weight:400;margin:0;cursor:pointer;display:inline-flex;align-items:center;gap:9px;word-break:break-word}
   h1:hover{color:var(--link)}
   h1 .chev{font-size:15px;color:var(--muted);transition:transform .2s}
   h1.abierto .chev{transform:rotate(90deg)}
-  .verificado{
-    font-size:11px;color:var(--muted);border:1px solid var(--border);background:var(--soft);
-    padding:3px 8px;white-space:nowrap;margin-top:10px;
-  }
+  .verificado{font-size:11px;color:var(--muted);border:1px solid var(--border);background:var(--soft);padding:3px 8px;white-space:nowrap;margin-top:10px}
   .subtitle{color:var(--muted);font-size:13px;margin:9px 0 14px;font-style:italic}
   .lead{font-size:14.5px;margin:0 0 14px}
 
-  .ficha-rapida{
-    display:none;border:1px solid var(--border);border-left:4px solid var(--link);
-    background:var(--soft-blue);padding:12px 14px;margin:12px 0 4px;
-  }
+  .ficha-rapida{display:none;border:1px solid var(--border);border-left:4px solid var(--link);background:var(--soft-blue);padding:12px 14px;margin:12px 0 4px}
   .ficha-rapida.visible{display:block}
   .ficha-rapida ul{margin:6px 0 0;padding-left:18px}
   .ficha-rapida li{margin:2px 0}
 
-  /* ============ INFOBOX ============ */
-  .infobox{
-    width:322px;float:right;margin:4px 0 18px 24px;border:1px solid var(--border);
-    background:var(--soft);font-size:12px;
-  }
-  .infobox .ibox-title{
-    background:var(--head-blue);text-align:center;font-family:Georgia,serif;
-    font-size:16.5px;font-weight:700;padding:9px 8px;border-bottom:1px solid var(--border);
-  }
-  .ibox-section{
-    background:var(--head-blue);font-weight:700;text-align:center;padding:5px;
-    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  }
+  .infobox{width:322px;float:right;margin:4px 0 18px 24px;border:1px solid var(--border);background:var(--soft);font-size:12px}
+  .infobox .ibox-title{background:var(--head-blue);text-align:center;font-family:Georgia,serif;font-size:16.5px;font-weight:700;padding:9px 8px;border-bottom:1px solid var(--border)}
+  .ibox-section{background:var(--head-blue);font-weight:700;text-align:center;padding:5px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
   .ibox-table{width:100%;border-collapse:collapse}
   .ibox-table td{padding:5px 8px;vertical-align:top;border-bottom:1px solid var(--line)}
   .ibox-table td:first-child{width:42%;font-weight:700;color:var(--muted)}
-  .ibox-bandera{
-    background:var(--page);padding:10px 8px;text-align:center;border-bottom:1px solid var(--line);
-  }
-  .ibox-bandera .bandera-grande{
-    width:132px;height:88px;border:1px solid var(--border);display:block;margin:0 auto 5px;
-  }
+  .ibox-bandera{background:var(--page);padding:10px 8px;text-align:center;border-bottom:1px solid var(--line)}
+  .ibox-bandera .bandera-grande{width:132px;height:88px;border:1px solid var(--border);display:block;margin:0 auto 5px}
   .ibox-bandera span{font-size:11px;color:var(--muted)}
-  .bandera{
-    width:20px;height:13.3px;border:1px solid var(--border);vertical-align:-2px;margin-right:6px;
-    display:inline-block;
-  }
+  .bandera{width:20px;height:13.3px;border:1px solid var(--border);vertical-align:-2px;margin-right:6px;display:inline-block}
   .ibox-chips{display:flex;flex-wrap:wrap;gap:5px;padding:9px 8px}
-  .chip{
-    border:1px solid var(--border);background:var(--page);padding:3px 7px;font-size:11px;
-  }
+  .chip{border:1px solid var(--border);background:var(--page);padding:3px 7px;font-size:11px}
   .clear{clear:both}
 
-  /* ============ ESPACIOS DE IMAGEN (estilo miniatura) ============ */
   .slot{margin:12px 0;border:1px solid var(--border);background:var(--thumb-bg);padding:4px}
-  .slot .marco{
-    width:100%;min-height:140px;display:flex;align-items:center;justify-content:center;
-    background:repeating-linear-gradient(45deg,var(--shade) 0 10px,transparent 10px 20px);
-    border:1px dashed var(--border);text-align:center;padding:14px;
-  }
+  .slot .marco{width:100%;min-height:140px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,var(--shade) 0 10px,transparent 10px 20px);border:1px dashed var(--border);text-align:center;padding:14px}
   .slot .marco img{display:block;width:100%;height:auto;cursor:zoom-in}
   .slot .vacio{color:var(--muted);font-size:11.5px;line-height:1.5}
   .slot .vacio b{display:block;font-size:15px;color:var(--text);letter-spacing:1px;margin-bottom:3px}
-  .slot figcaption{
-    font-size:11.5px;color:var(--muted);padding:6px 5px 3px;border-top:1px solid var(--line);
-    margin-top:4px;line-height:1.45;
-  }
+  .slot figcaption{font-size:11.5px;color:var(--muted);padding:6px 5px 3px;border-top:1px solid var(--line);margin-top:4px;line-height:1.45}
   .slot figcaption b{color:var(--text)}
   .slot-infobox{margin:10px;border:none;padding:0;background:none}
   .slot-infobox .marco{border:1px solid var(--border);background:var(--page)}
@@ -273,22 +170,15 @@
   .slot-ancho{width:100%}
   .slot-ancho .marco{min-height:220px}
   .slot-media{width:100%;max-width:520px;margin:14px auto}
-  @media (max-width:640px){
-    .slot-derecha,.slot-izquierda{float:none;width:100%;margin:12px 0}
-  }
+  @media (max-width:640px){ .slot-derecha,.slot-izquierda{float:none;width:100%;margin:12px 0} }
 
-  /* ============ TITULARES Y TEXTO ============ */
-  h2{
-    font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:400;
-    border-bottom:1px solid var(--border);padding-bottom:4px;margin:30px 0 10px;
-  }
+  h2{font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:400;border-bottom:1px solid var(--border);padding-bottom:4px;margin:30px 0 10px}
   h3{font-family:Georgia,"Times New Roman",serif;font-size:17.5px;margin:20px 0 6px}
   h4{font-size:14px;margin:14px 0 4px}
   p{margin:9px 0}
   section{scroll-margin-top:66px}
   .destacado{background:var(--soft-blue);padding:0 2px}
 
-  /* ============ AVISOS ============ */
   .notice{border:1px solid var(--border);background:var(--soft);padding:11px 13px;margin:13px 0}
   .notice.blue{background:var(--soft-blue);border-left:4px solid var(--link)}
   .notice.cream{background:var(--cream);border-left:4px solid var(--cream-bd)}
@@ -296,7 +186,6 @@
   .notice p:first-child{margin-top:0}
   .notice p:last-child{margin-bottom:0}
 
-  /* ============ MARCA JEP ============ */
   .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
   .brand-card{border:1px solid var(--border);background:var(--page);padding:0;display:flex;flex-direction:column}
   .brand-card .cab{background:var(--head-blue);border-bottom:1px solid var(--border);padding:8px 10px}
@@ -306,50 +195,32 @@
   .brand-card .slot{margin:0}
   .brand-card .slot .marco{min-height:110px}
 
-  /* ============ PROGRAMAS / SERVICIOS ============ */
   .programa{border:1px solid var(--border);background:var(--page);margin:16px 0}
-  .programa .p-cab{
-    background:var(--head-blue);border-bottom:1px solid var(--border);padding:8px 12px;
-    font-weight:700;display:flex;align-items:center;gap:9px;
-  }
-  .programa .p-num{
-    width:22px;height:22px;background:var(--page);border:1px solid var(--border);
-    display:flex;align-items:center;justify-content:center;font-size:12px;flex:0 0 auto;
-  }
+  .programa .p-cab{background:var(--head-blue);border-bottom:1px solid var(--border);padding:8px 12px;font-weight:700;display:flex;align-items:center;gap:9px}
+  .programa .p-num{width:22px;height:22px;background:var(--page);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;flex:0 0 auto}
   .programa .p-cuerpo{padding:12px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
   .programa .p-cuerpo .slot{margin:0}
   .programa .aplic{background:var(--cream);border-left:4px solid var(--cream-bd);padding:9px 11px;margin-top:10px;font-size:12.5px}
   @media (max-width:820px){ .programa .p-cuerpo{grid-template-columns:1fr} }
 
-  /* ============ RECONOCIMIENTO ============ */
   .premio{border:1px solid var(--cream-bd);background:var(--cream);padding:0;margin:14px 0}
   .premio .cab{border-bottom:1px solid var(--cream-bd);padding:8px 12px;font-weight:700}
   .premio .cuerpo{padding:12px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px}
   .premio .cuerpo .slot{margin:0;background:transparent}
   @media (max-width:820px){ .premio .cuerpo{grid-template-columns:1fr} }
 
-  /* ============ LÍNEA DE TIEMPO ============ */
   .timeline{border-left:3px solid var(--border);margin:16px 0 16px 10px;padding-left:20px}
   .event{position:relative;margin:0 0 18px}
-  .event:before{
-    content:"";position:absolute;width:11px;height:11px;border-radius:50%;
-    background:var(--link);left:-26px;top:6px;border:2px solid var(--page);
-    box-shadow:0 0 0 1px var(--link);
-  }
+  .event:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--link);left:-26px;top:6px;border:2px solid var(--page);box-shadow:0 0 0 1px var(--link)}
   .year{font-weight:700;color:var(--muted);font-size:12px}
   .event-title{font-weight:700;margin-top:2px}
   .event p{margin:3px 0 0;font-size:13px}
 
-  /* ============ ETIQUETAS ============ */
   .skills{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
   .tag{background:var(--soft);border:1px solid var(--border);padding:4px 10px;font-size:12px;border-radius:2px}
 
-  .quote{
-    border:1px solid var(--border);border-left:4px solid var(--border);background:var(--soft);
-    padding:15px 18px;margin:13px 0;font-family:Georgia,serif;font-style:italic;font-size:15px;
-  }
+  .quote{border:1px solid var(--border);border-left:4px solid var(--border);background:var(--soft);padding:15px 18px;margin:13px 0;font-family:Georgia,serif;font-style:italic;font-size:15px}
 
-  /* ============ TABLAS ============ */
   .tabla-wrap{overflow-x:auto;margin:13px 0}
   .tabla{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
   .tabla th,.tabla td{border:1px solid var(--border);padding:7px 9px;text-align:left;vertical-align:top}
@@ -359,39 +230,90 @@
   /* ============ BOTONES DE CONTACTO ============ */
   .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
   .cta{
-    display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:4px;
+    display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;
     font-size:13px;font-weight:700;color:#fff;border:1px solid transparent;text-decoration:none;
+    transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
   }
-  .cta:hover{text-decoration:none;filter:brightness(1.06)}
+  .cta:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18);filter:brightness(1.08)}
   .cta.wa{background:var(--green-2);border-color:var(--green)}
   .cta.tg{background:var(--blue-tg);border-color:var(--blue-tg)}
-  .cta.ig{background:#c13584;border-color:#a02a6d}
+  .cta.ig{background:linear-gradient(45deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5);border-color:#a02a6d}
+  .cta.tk{background:#000;border-color:#000}
+  .cta.yt{background:#ff0000;border-color:#cc0000}
   .cta.fb{background:#1877f2;border-color:#1462c9}
   .cta.mail{background:var(--soft);color:var(--text);border-color:var(--border)}
+  .cta.mail .ico svg{fill:var(--text)}
   .cta.inactivo{background:var(--soft);color:var(--muted);border:1px dashed var(--border);cursor:default;font-weight:400}
-  .cta.inactivo:hover{filter:none}
-  .cta .ico{
-    width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;
-    font-size:12px;font-weight:800;
+  .cta.inactivo:hover{filter:none;transform:none;box-shadow:none}
+  .cta .ico{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center}
+  .cta .ico svg{width:16px;height:16px;fill:#fff;display:block}
+
+  /* ============ REDES SOCIALES (NUEVO) ============ */
+  .social-grid{
+    display:grid;grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:14px;margin:18px 0;
+  }
+  .social-card{
+    position:relative;display:flex;align-items:center;gap:14px;
+    padding:14px 16px;border:1px solid var(--border);background:var(--soft);
+    border-radius:14px;text-decoration:none;color:var(--text);overflow:hidden;
+    transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  }
+  .social-card:hover{
+    text-decoration:none;transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.18);border-color:var(--link);
+  }
+  .social-card .logo-box{
+    position:relative;width:62px;height:62px;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:16px;background:var(--page);border:1px solid var(--border);
+    isolation:isolate;overflow:visible;
+    transition:transform .3s ease;
+  }
+  .social-card:hover .logo-box{transform:scale(1.08)}
+  .social-card .logo-box svg{
+    width:34px;height:34px;position:relative;z-index:2;display:block;
+  }
+  /* Humo realista */
+  .social-card .smoke{
+    position:absolute;inset:0;pointer-events:none;z-index:1;
+    overflow:visible;border-radius:16px;
+  }
+  .social-card .smoke span{
+    position:absolute;left:50%;bottom:10px;
+    width:22px;height:22px;margin-left:-11px;border-radius:50%;
+    background:radial-gradient(circle at 50% 55%,
+      var(--smoke-color, rgba(180,180,180,.85)) 0%,
+      var(--smoke-color, rgba(180,180,180,.35)) 45%,
+      rgba(0,0,0,0) 72%);
+    filter:blur(6px);opacity:0;
+    animation:smokeRise 4.2s ease-in infinite;
+    will-change:transform, opacity;
+  }
+  @keyframes smokeRise{
+    0%   { transform:translate(0,0) scale(.35); opacity:0; }
+    15%  { opacity:.9; }
+    55%  { opacity:.45; }
+    100% { transform:translate(var(--dx,4px), -58px) scale(2.6); opacity:0; }
+  }
+  .social-card.wa{ --smoke-color:rgba(37,211,102,.85); }
+  .social-card.ig{ --smoke-color:rgba(214,41,118,.85); }
+  .social-card.tk{ --smoke-color:rgba(37,244,238,.9); }
+  .social-card.yt{ --smoke-color:rgba(255,0,0,.8); }
+  .social-card.fb{ --smoke-color:rgba(24,119,242,.85); }
+
+  .social-card .info{display:flex;flex-direction:column;min-width:0;gap:3px}
+  .social-card .info b{font-size:13.5px;color:var(--text)}
+  .social-card .info span{
+    font-size:12px;color:var(--muted);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
   }
 
-  /* ============ REDES ============ */
-  .social-box{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:12px 0}
-  .social{border:1px solid var(--border);background:var(--soft);padding:10px 12px;display:flex;gap:10px;align-items:flex-start}
-  .social .av{
-    width:30px;height:30px;border:1px solid var(--border);background:var(--page);flex:0 0 auto;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;
-  }
-  .social b{display:block;font-size:12.5px}
-  .social span{font-size:11.5px;color:var(--muted)}
-
-  /* ============ OPINIONES ============ */
   .op-card{border:1px solid var(--border);background:var(--soft);padding:13px 15px;margin:12px 0}
   .estrellas{color:var(--star);letter-spacing:2px;font-size:15px}
   .op-card .meta{font-size:11.5px;color:var(--muted);margin-top:8px;text-align:right}
   .op-vacio{border:1px dashed var(--border);background:var(--soft);padding:14px;color:var(--muted);font-size:12.5px}
 
-  /* ============ FAQ ============ */
   .faq details{border-bottom:1px solid var(--line);padding:9px 2px}
   .faq summary{cursor:pointer;color:var(--link);font-weight:600;list-style:none;display:flex;gap:8px;align-items:flex-start}
   .faq summary::-webkit-details-marker{display:none}
@@ -399,17 +321,13 @@
   .faq details[open] summary:before{transform:rotate(90deg)}
   .faq details p{margin:8px 0 2px 18px;font-size:13px}
 
-  pre{
-    background:var(--soft);border:1px solid var(--border);padding:11px;
-    overflow-x:auto;font-size:12px;line-height:1.5;
-  }
+  pre{background:var(--soft);border:1px solid var(--border);padding:11px;overflow-x:auto;font-size:12px;line-height:1.5}
   code{background:var(--soft);border:1px solid var(--line);padding:1px 4px;font-size:12px}
 
   .footer{margin-top:36px;padding:16px 0 0;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
   .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .small{font-size:11.5px;color:var(--muted)}
 
-  /* ============ LIGHTBOX ============ */
   .lightbox{
     display:none;position:fixed;inset:0;background:#000000e6;z-index:60;
     align-items:center;justify-content:center;
@@ -419,14 +337,8 @@
   .lightbox.visible{display:flex}
   .lightbox img{max-width:92%;max-height:78vh;background:#fff;border-radius:2px}
   .lightbox .pie{color:#e6e6e6;font-size:12.5px;text-align:center;max-width:680px}
-  .lightbox .cerrar{
-    position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:18px;color:#fff;
-    font-size:30px;cursor:pointer;background:none;border:none;line-height:1;
-  }
-  .lightbox .nav{
-    position:absolute;top:50%;transform:translateY(-50%);background:#ffffff22;border:none;
-    color:#fff;font-size:26px;cursor:pointer;padding:12px 15px;border-radius:3px;
-  }
+  .lightbox .cerrar{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:18px;color:#fff;font-size:30px;cursor:pointer;background:none;border:none;line-height:1}
+  .lightbox .nav{position:absolute;top:50%;transform:translateY(-50%);background:#ffffff22;border:none;color:#fff;font-size:26px;cursor:pointer;padding:12px 15px;border-radius:3px}
   .lightbox .nav.prev{left:10px}
   .lightbox .nav.next{right:10px}
   @media (max-width:520px){
@@ -434,7 +346,6 @@
     .lightbox img{max-height:68vh}
   }
 
-  /* ============ VOLVER ARRIBA ============ */
   .arriba{
     position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;display:none;
     border:1px solid var(--border);background:var(--soft);color:var(--text);
@@ -445,19 +356,15 @@
 
   @media (max-width:900px){
     .layout{grid-template-columns:1fr;padding:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
-    .toc{
-      display:none;position:static;max-height:none;border-right:none;
-      border:1px solid var(--border);background:var(--soft);padding:12px;margin-bottom:14px;
-    }
+    .toc{display:none;position:static;max-height:none;border-right:none;border:1px solid var(--border);background:var(--soft);padding:12px;margin-bottom:14px}
     .toc.abierta{display:block}
     .infobox{width:100%;float:none;margin:10px 0 18px}
     .brand-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
-    .social-box{grid-template-columns:1fr}
+    .social-grid{grid-template-columns:1fr}
     h1{font-size:27px}
   }
 
-  /* ============ TELÉFONOS PEQUEÑOS ============ */
   @media (max-width:480px){
     body{font-size:13.5px}
     .layout{padding:10px}
@@ -482,6 +389,9 @@
     .event:before{left:-22px}
     .quote{font-size:14px;padding:12px 14px}
     .arriba{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px 11px;font-size:11.5px}
+    .social-card{padding:12px 13px;gap:11px}
+    .social-card .logo-box{width:54px;height:54px}
+    .social-card .logo-box svg{width:28px;height:28px}
   }
 </style>
 </head>
@@ -503,41 +413,34 @@
   <!-- ===================== ÍNDICE ===================== -->
   <nav class="toc" id="toc" aria-label="Contenidos">
     <h3>Contenidos <span id="plegarTodo">plegar</span></h3>
-
     <a href="#inicio">Inicio</a>
-
     <div class="grupo">
       <a href="#biografia"><span class="tog">▾</span>Biografía</a>
       <a class="sub" href="#origenes">Orígenes y primeros años</a>
       <a class="sub" href="#colegio">Etapa escolar</a>
       <a class="sub" href="#formacion">Formación académica</a>
     </div>
-
     <div class="grupo">
       <a href="#mercados"><span class="tog">▾</span>Mercados financieros</a>
       <a class="sub" href="#acciones">Bolsa de valores</a>
       <a class="sub" href="#cripto">Criptomonedas</a>
     </div>
-
     <div class="grupo">
       <a href="#hotmart"><span class="tog">▾</span>Ventas digitales</a>
       <a class="sub" href="#hotmart-experiencia">Experiencia en Hotmart</a>
       <a class="sub" href="#hotmart-metodo">Método de trabajo</a>
     </div>
-
     <div class="grupo">
       <a href="#jep"><span class="tog">▾</span>Marca JEP</a>
       <a class="sub" href="#jepdesigner">JEP Designer</a>
       <a class="sub" href="#jepvizion">JEP Vizion</a>
       <a class="sub" href="#jepprodigy">JEP Prodigy</a>
     </div>
-
     <div class="grupo">
       <a href="#axtoon"><span class="tog">▾</span>Axtoon Distribuidora</a>
       <a class="sub" href="#axtoon-operacion">Operación y logística</a>
       <a class="sub" href="#axtoon-catalogo">Líneas de producto</a>
     </div>
-
     <a href="#servicios">Líneas de servicio</a>
     <a href="#reconocimientos">Reconocimientos</a>
     <a href="#trayectoria">Trayectoria</a>
@@ -636,10 +539,14 @@
           <span class="chip">Distribución nacional</span>
         </div>
 
-        <div class="ibox-section">Redes</div>
+        <div class="ibox-section">Redes oficiales</div>
         <table class="ibox-table" id="iboxRedes">
-          <tr><td>Facebook</td><td>Estiben Portilla</td></tr>
-          <tr><td>Instagram</td><td id="iboxIg">Perfil activo</td></tr>
+          <tr><td>WhatsApp</td><td><a href="https://wa.me/573223729232" target="_blank" rel="noopener">+57 322 372 9232</a></td></tr>
+          <tr><td>Instagram</td><td><a href="https://www.instagram.com/estibenportilla" target="_blank" rel="noopener">@estibenportilla</a></td></tr>
+          <tr><td>TikTok</td><td><a href="https://vm.tiktok.com/ZS98VnbD2kmaG-WQ069/" target="_blank" rel="noopener">Perfil activo</a></td></tr>
+          <tr><td>YouTube</td><td><a href="https://youtube.com/@jepvizion" target="_blank" rel="noopener">@jepvizion</a></td></tr>
+          <tr><td>Facebook</td><td><a href="https://www.facebook.com/share/1E5MTZsxtm/" target="_blank" rel="noopener">Estiben Portilla</a></td></tr>
+          <tr><td>Facebook 2</td><td><a href="https://www.facebook.com/share/1EB4PKjfDp/" target="_blank" rel="noopener">Perfil secundario</a></td></tr>
         </table>
 
         <figure class="slot slot-infobox" data-img="IMG.2">
@@ -1146,8 +1053,8 @@
 
       <h3>Enfoque personal</h3>
       <div class="quote">
-        “Aprender de todo un poco no dispersa: permite que una misma persona pueda diseñar la idea, venderla y
-        sostenerla en el tiempo.”
+        "Aprender de todo un poco no dispersa: permite que una misma persona pueda diseñar la idea, venderla y
+        sostenerla en el tiempo."
       </div>
       <p class="small">
         Frase editorial que resume el enfoque descrito en este perfil; no se presenta como cita textual verificada.
@@ -1158,19 +1065,133 @@
     <section id="contacto">
       <h2>Contacto y presencia digital</h2>
       <p>
-        En redes sociales aparece principalmente como <b>Estiben Portilla</b> en Facebook, y también cuenta con
-        presencia en Instagram. Los canales comerciales de Axtoon Distribuidora S.A.S. se publicarán en esta misma
-        sección.
+        Estos son los canales oficiales de contacto y las redes activas. Al hacer clic en cada tarjeta se abre el
+        perfil o la conversación directamente.
       </p>
 
       <div class="cta-row" id="ctaRow"></div>
       <p class="small" id="ctaAviso"></p>
 
-      <div class="social-box">
-        <div class="social"><span class="av">f</span><div><b>Facebook</b><span>Estiben Portilla</span></div></div>
-        <div class="social"><span class="av">ig</span><div><b>Instagram</b><span>Perfil activo — agregar usuario oficial</span></div></div>
-        <div class="social"><span class="av">JEP</span><div><b>Marca JEP</b><span>Sitio oficial pendiente</span></div></div>
-        <div class="social"><span class="av">AX</span><div><b>Axtoon Distribuidora S.A.S.</b><span>Canales comerciales pendientes</span></div></div>
+      <!-- ===== TARJETAS DE REDES CON HUMO ===== -->
+      <div class="social-grid">
+
+        <a class="social-card wa" href="https://wa.me/573223729232" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-8px;animation-delay:0s"></span>
+              <span style="--dx:6px;animation-delay:.7s"></span>
+              <span style="--dx:-4px;animation-delay:1.4s"></span>
+              <span style="--dx:9px;animation-delay:2.1s"></span>
+              <span style="--dx:-6px;animation-delay:2.8s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <div class="info">
+            <b>WhatsApp</b>
+            <span>+57 322 372 9232</span>
+          </div>
+        </a>
+
+        <a class="social-card ig" href="https://www.instagram.com/estibenportilla" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-7px;animation-delay:.1s"></span>
+              <span style="--dx:7px;animation-delay:.85s"></span>
+              <span style="--dx:-5px;animation-delay:1.6s"></span>
+              <span style="--dx:8px;animation-delay:2.35s"></span>
+              <span style="--dx:-6px;animation-delay:3.1s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FEDA75"/>
+                  <stop offset="25%" stop-color="#FA7E1E"/>
+                  <stop offset="50%" stop-color="#D62976"/>
+                  <stop offset="75%" stop-color="#962FBF"/>
+                  <stop offset="100%" stop-color="#4F5BD5"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#igGrad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="info">
+            <b>Instagram</b>
+            <span>@estibenportilla</span>
+          </div>
+        </a>
+
+        <a class="social-card tk" href="https://vm.tiktok.com/ZS98VnbD2kmaG-WQ069/" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-6px;animation-delay:.2s"></span>
+              <span style="--dx:7px;animation-delay:.95s"></span>
+              <span style="--dx:-4px;animation-delay:1.7s"></span>
+              <span style="--dx:8px;animation-delay:2.45s"></span>
+              <span style="--dx:-5px;animation-delay:3.2s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#25F4EE" d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" transform="translate(-2,-0.5)"/>
+              <path fill="#FE2C55" d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" transform="translate(2,0.5)"/>
+              <path fill="#000" d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+            </svg>
+          </div>
+          <div class="info">
+            <b>TikTok</b>
+            <span>Perfil oficial</span>
+          </div>
+        </a>
+
+        <a class="social-card yt" href="https://youtube.com/@jepvizion" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-7px;animation-delay:.15s"></span>
+              <span style="--dx:6px;animation-delay:.9s"></span>
+              <span style="--dx:-4px;animation-delay:1.65s"></span>
+              <span style="--dx:9px;animation-delay:2.4s"></span>
+              <span style="--dx:-6px;animation-delay:3.15s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <div class="info">
+            <b>YouTube</b>
+            <span>@jepvizion</span>
+          </div>
+        </a>
+
+        <a class="social-card fb" href="https://www.facebook.com/share/1E5MTZsxtm/" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-8px;animation-delay:.05s"></span>
+              <span style="--dx:6px;animation-delay:.8s"></span>
+              <span style="--dx:-4px;animation-delay:1.55s"></span>
+              <span style="--dx:9px;animation-delay:2.3s"></span>
+              <span style="--dx:-6px;animation-delay:3.05s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="info">
+            <b>Facebook</b>
+            <span>Estiben Portilla</span>
+          </div>
+        </a>
+
+        <a class="social-card fb" href="https://www.facebook.com/share/1EB4PKjfDp/" target="_blank" rel="noopener">
+          <div class="logo-box">
+            <div class="smoke" aria-hidden="true">
+              <span style="--dx:-7px;animation-delay:.25s"></span>
+              <span style="--dx:7px;animation-delay:1s"></span>
+              <span style="--dx:-5px;animation-delay:1.75s"></span>
+              <span style="--dx:8px;animation-delay:2.5s"></span>
+              <span style="--dx:-6px;animation-delay:3.25s"></span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="info">
+            <b>Facebook 2</b>
+            <span>Perfil secundario</span>
+          </div>
+        </a>
+
       </div>
     </section>
 
@@ -1217,7 +1238,7 @@
         <details><summary>¿Tiene formación en inversiones?</summary><p>Sí: compra y venta de acciones en la Bolsa de Valores de Colombia y el mercado de Nueva York, además de formación en criptomonedas. No ofrece asesoría financiera ni administra dinero de terceros.</p></details>
         <details><summary>¿JEP vende cursos o formación en trading?</summary><p>No. Las secciones financieras de este perfil son formación personal. La actividad comercial actual corresponde a diseño, marca y distribución de productos.</p></details>
         <details><summary>¿A qué ciudades llega Axtoon?</summary><p>El objetivo es la cobertura nacional a través de transportadoras aliadas. La disponibilidad exacta por municipio se confirma al momento del pedido.</p></details>
-        <details><summary>¿Cómo se le puede contactar?</summary><p>A través de sus redes sociales. Los canales oficiales aparecerán en la sección de contacto y en enlaces externos cuando estén publicados.</p></details>
+        <details><summary>¿Cómo se le puede contactar?</summary><p>A través de WhatsApp (+57 322 372 9232), Instagram (@estibenportilla), TikTok, YouTube (@jepvizion) y Facebook (Estiben Portilla).</p></details>
       </div>
     </section>
 
@@ -1225,10 +1246,13 @@
     <section id="enlaces">
       <h2>Enlaces externos</h2>
       <ul>
-        <li>Facebook: Estiben Portilla</li>
-        <li>Instagram: agregar enlace oficial</li>
-        <li>Marca JEP: agregar sitio oficial cuando esté disponible</li>
-        <li>Axtoon Distribuidora S.A.S.: agregar canal comercial cuando esté disponible</li>
+        <li>WhatsApp: <a href="https://wa.me/573223729232" target="_blank" rel="noopener">wa.me/573223729232</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/estibenportilla" target="_blank" rel="noopener">@estibenportilla</a></li>
+        <li>TikTok: <a href="https://vm.tiktok.com/ZS98VnbD2kmaG-WQ069/" target="_blank" rel="noopener">Perfil oficial en TikTok</a></li>
+        <li>YouTube: <a href="https://youtube.com/@jepvizion" target="_blank" rel="noopener">@jepvizion</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/share/1E5MTZsxtm/" target="_blank" rel="noopener">Estiben Portilla</a> · <a href="https://www.facebook.com/share/1EB4PKjfDp/" target="_blank" rel="noopener">Perfil secundario</a></li>
+        <li>Marca JEP: sitio oficial en preparación</li>
+        <li>Axtoon Distribuidora S.A.S.: canal comercial en preparación</li>
       </ul>
     </section>
 
@@ -1263,104 +1287,84 @@
 <script>
 /* =========================================================
    1) IMÁGENES
-   ---------------------------------------------------------
-   ¡IMPORTANTE! Este es el punto que estaba causando el problema:
-   antes solo "IMG.1" tenía un nombre de archivo; el resto estaba
-   vacío ("") y por eso NO cargaban, sin importar qué subieras a
-   GitHub. Ahora cada IMG.X ya tiene su nombre de archivo asignado
-   (img1.jpg, img2.jpg, img3.jpg... img21.jpg).
-
-   QUÉ DEBES HACER:
-   Sube a la MISMA carpeta de GitHub donde está este .html un
-   archivo con el nombre exacto de cada fila de abajo (mismas
-   mayúsculas/minúsculas, mismo formato .jpg). Si subes una imagen
-   en formato .png o .webp, cambia la extensión aquí también.
-
-   Si prefieres subir las fotos a otra carpeta o repositorio,
-   escribe esa ruta una sola vez en BASE, por ejemplo:
-   const BASE = "https://raw.githubusercontent.com/USUARIO/REPO/main/";
-   y deja solo el nombre del archivo en cada línea (como está ahora).
-
-   También puedes pegar el enlace completo de GitHub (el que dice
-   /blob/) directamente en una fila y el código lo convierte solo.
+   Sube a la misma carpeta del .html un archivo con el nombre
+   exacto de cada fila (img1.jpg ... img21.jpg). Si usas .png
+   o .webp, cambia la extensión aquí también.
+   Puedes poner un enlace completo de GitHub en cualquier fila
+   (con /blob/) y el código lo convierte a raw automáticamente.
    ========================================================= */
 const BASE = "";
 
 const IMAGENES = {
-  "IMG.1":  "img1.jpg",   // Retrato principal (infobox)
-  "IMG.2":  "img2.jpg",   // Firma o logo JEP (infobox)
-  "IMG.3":  "img3.jpg",   // Paisaje San Miguel La Dorada
-  "IMG.4":  "img4.jpg",   // Foto de infancia/familia
-  "IMG.5":  "img5.jpg",   // Colegio Jordan Ortiz
-  "IMG.6":  "img6.jpg",   // Diploma / acta de grado
-  "IMG.7":  "img7.jpg",   // Espacio de estudio
-  "IMG.8":  "img8.jpg",   // Espacio de trabajo / gráficos de mercado
-  "IMG.9":  "img9.jpg",   // Captura sobre criptomonedas
-  "IMG.10": "img10.jpg",  // Ventas digitales / Hotmart
-  "IMG.11": "img11.jpg",  // Logo JEP Designer
-  "IMG.12": "img12.jpg",  // Logo JEP Vizion
-  "IMG.13": "img13.jpg",  // Logo JEP Prodigy
-  "IMG.14": "img14.jpg",  // Banner con los 3 logos JEP
-  "IMG.15": "img15.jpg",  // Logo Axtoon
-  "IMG.16": "img16.jpg",  // Bodega / inventario
-  "IMG.17": "img17.jpg",  // Equipo de trabajo Axtoon
-  "IMG.18": "img18.jpg",  // Trabajos de diseño (JEP Designer)
-  "IMG.19": "img19.jpg",  // Proceso creativo (JEP Vizion)
-  "IMG.20": "img20.jpg",  // Proyecto en desarrollo (JEP Prodigy)
-  "IMG.21": "img21.jpg"   // Diploma / medalla distinción escolar
+  "IMG.1":  "img1.jpg",
+  "IMG.2":  "img2.jpg",
+  "IMG.3":  "img3.jpg",
+  "IMG.4":  "img4.jpg",
+  "IMG.5":  "img5.jpg",
+  "IMG.6":  "img6.jpg",
+  "IMG.7":  "img7.jpg",
+  "IMG.8":  "img8.jpg",
+  "IMG.9":  "img9.jpg",
+  "IMG.10": "img10.jpg",
+  "IMG.11": "img11.jpg",
+  "IMG.12": "img12.jpg",
+  "IMG.13": "img13.jpg",
+  "IMG.14": "img14.jpg",
+  "IMG.15": "img15.jpg",
+  "IMG.16": "img16.jpg",
+  "IMG.17": "img17.jpg",
+  "IMG.18": "img18.jpg",
+  "IMG.19": "img19.jpg",
+  "IMG.20": "img20.jpg",
+  "IMG.21": "img21.jpg"
 };
 
 /* =========================================================
-   2) DATOS DE CONTACTO (déjalos vacíos si aún no los tienes)
-      whatsapp: solo números con indicativo, ej. "573001234567"
+   2) DATOS DE CONTACTO (ya cargados con los reales)
    ========================================================= */
 const CONTACTO = {
-  whatsapp: "",
+  whatsapp: "573223729232",
   telegram: "",
-  instagram: "",
-  facebook: "",
+  instagram: "estibenportilla",
+  tiktok: "https://vm.tiktok.com/ZS98VnbD2kmaG-WQ069/",
+  youtube: "https://youtube.com/@jepvizion",
+  facebook: "https://www.facebook.com/share/1E5MTZsxtm/",
+  facebook2: "https://www.facebook.com/share/1EB4PKjfDp/",
   correo: ""
 };
 
 /* =========================================================
    3) OPINIONES REALES (agrega solo las que puedas respaldar)
-      { texto, autor, fecha, estrellas: 1-5 }
    ========================================================= */
 const OPINIONES = [];
+
+/* ====== Iconos SVG para los botones CTA ====== */
+const ICONOS_CTA = {
+  wa: '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>',
+  ig: '<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>',
+  tk: '<svg viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg>',
+  yt: '<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
+  fb: '<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
+  mail: '<svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.236-8 4.944-8-4.944V6l8 4.944L20 6v2.236z"/></svg>'
+};
 
 /* ====== Resolver la ruta de cada imagen ====== */
 function resolverImagen(valor){
   var v = (valor || '').trim();
   if (!v) return '';
-
-  // Enlace normal de GitHub -> enlace raw
   if (v.indexOf('github.com/') !== -1 && v.indexOf('/blob/') !== -1) {
     v = v.replace('github.com/', 'raw.githubusercontent.com/').replace('/blob/', '/');
   }
-  // Enlace de la vista "raw" de GitHub -> dominio raw
   if (v.indexOf('github.com/') !== -1 && v.indexOf('/raw/') !== -1) {
     v = v.replace('github.com/', 'raw.githubusercontent.com/').replace('/raw/', '/');
   }
-  // Ya es un enlace completo
   if (/^https?:\/\//i.test(v)) return v;
-
-  // Solo el nombre del archivo: se usa BASE si está definido
   var base = (BASE || '').trim();
   if (base && base.slice(-1) !== '/') base += '/';
   return base + v.replace(/^\.?\//, '');
 }
 
-/* ====== Render de los espacios de imagen ======
-   Nota de corrección: antes cada imagen se agregaba al arreglo de la
-   galería solo cuando terminaba de cargar (evento "load"). Como la
-   carga es asíncrona (y varias miniaturas usan loading="lazy", es
-   decir, ni siquiera empiezan a cargar hasta que entran en pantalla),
-   el orden del arreglo no coincidía con el orden real de la página y
-   los botones "anterior/siguiente" del visor podían saltar imágenes
-   o mostrarlas en desorden. Ahora el arreglo se construye una sola
-   vez, de forma síncrona y en el mismo orden en que aparecen los
-   espacios de imagen en el documento; cada entrada se marca como
-   inválida si su imagen falla al cargar. */
+/* ====== Render de los espacios de imagen ====== */
 (function(){
   var slots = Array.prototype.slice.call(document.querySelectorAll('.slot'));
   var galeria = [];
@@ -1451,18 +1455,16 @@ document.addEventListener('keydown', function(e){
   if (!fila) return;
   var items = [];
 
-  if (CONTACTO.whatsapp) items.push({ c:'wa', ico:'W', txt:'Escribir por WhatsApp', href:'https://wa.me/' + CONTACTO.whatsapp });
-  if (CONTACTO.telegram) items.push({ c:'tg', ico:'T', txt:'Abrir Telegram', href:'https://t.me/' + CONTACTO.telegram.replace('@','') });
-  if (CONTACTO.instagram) items.push({ c:'ig', ico:'ig', txt:'Ver Instagram', href:'https://instagram.com/' + CONTACTO.instagram.replace('@','') });
-  if (CONTACTO.facebook) items.push({ c:'fb', ico:'f', txt:'Ver Facebook', href:CONTACTO.facebook });
-  if (CONTACTO.correo) items.push({ c:'mail', ico:'@', txt:CONTACTO.correo, href:'mailto:' + CONTACTO.correo });
+  if (CONTACTO.whatsapp) items.push({ c:'wa', ico:ICONOS_CTA.wa, txt:'WhatsApp', href:'https://wa.me/' + CONTACTO.whatsapp });
+  if (CONTACTO.instagram) items.push({ c:'ig', ico:ICONOS_CTA.ig, txt:'Instagram', href:'https://instagram.com/' + CONTACTO.instagram.replace('@','') });
+  if (CONTACTO.tiktok) items.push({ c:'tk', ico:ICONOS_CTA.tk, txt:'TikTok', href:CONTACTO.tiktok });
+  if (CONTACTO.youtube) items.push({ c:'yt', ico:ICONOS_CTA.yt, txt:'YouTube', href:CONTACTO.youtube });
+  if (CONTACTO.facebook) items.push({ c:'fb', ico:ICONOS_CTA.fb, txt:'Facebook', href:CONTACTO.facebook });
+  if (CONTACTO.correo) items.push({ c:'mail', ico:ICONOS_CTA.mail, txt:CONTACTO.correo, href:'mailto:' + CONTACTO.correo });
 
   if (!items.length) {
-    fila.innerHTML =
-      '<span class="cta inactivo"><span class="ico">W</span>WhatsApp — pendiente</span>' +
-      '<span class="cta inactivo"><span class="ico">ig</span>Instagram — pendiente</span>' +
-      '<span class="cta inactivo"><span class="ico">f</span>Facebook — pendiente</span>';
-    aviso.textContent = 'Los canales oficiales de contacto se publicarán en esta sección.';
+    fila.innerHTML = '<span class="cta inactivo">Contacto pendiente</span>';
+    aviso.textContent = 'Los canales oficiales se publicarán en esta sección.';
     return;
   }
 
@@ -1476,11 +1478,6 @@ document.addEventListener('keydown', function(e){
     fila.appendChild(a);
   });
   aviso.textContent = '';
-
-  if (CONTACTO.instagram) {
-    var celda = document.getElementById('iboxIg');
-    if (celda) celda.textContent = '@' + CONTACTO.instagram.replace('@','');
-  }
 })();
 
 /* ====== Opiniones ====== */
